@@ -36,7 +36,7 @@ export default function Home() {
             className="font-bold text-2xl tracking-tighter flex items-center gap-2 group cursor-pointer text-left outline-none hover:scale-[1.02] active:scale-[0.98] transition-transform duration-500"
           >
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500 shadow-[0_0_20px_rgba(168,85,247,0.4)] group-hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-500"></div>
-            Nexus<span className="text-zinc-500 group-hover:text-zinc-300 transition-colors duration-500">Agency</span>
+            Nexus<span className="text-zinc-500 font-light group-hover:text-zinc-300 transition-colors duration-500">Digital</span>
           </button>
           <div className="hidden md:flex items-center gap-10 text-sm font-medium text-zinc-400">
             <Link href="#services" className="hover:text-white transition-colors">Services</Link>
@@ -290,7 +290,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-20 text-center">Don&apos;t Just Take Our Word For It</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard 
-              quote="NexusAgency delivered an ecommerce platform that completely redefined our business. The conversion rate increase was immediate and substantial."
+              quote="Nexus Digital delivered an ecommerce platform that completely redefined our business. The conversion rate increase was immediate and substantial."
               author="Sarah Jenkins"
               role="Founder, Lumina Ecommerce"
               rating={5}
@@ -331,7 +331,7 @@ export default function Home() {
                    </div>
                    <div>
                      <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Email Us</div>
-                     <div className="font-semibold text-white text-lg">hello@nexus.agency</div>
+                     <div className="font-semibold text-white text-lg">hello@nexus.digital</div>
                    </div>
                 </div>
                 <div className="flex items-center gap-5 text-zinc-300">
@@ -358,9 +358,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center gap-2 mb-8 md:mb-0">
             <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500"></div>
-            <span className="font-bold text-xl tracking-tighter text-white">Nexus</span>
+            <span className="font-bold text-xl tracking-tighter text-white">Nexus<span className="text-zinc-500 font-light">Digital</span></span>
           </div>
-          <p className="text-zinc-500 text-sm mb-8 md:mb-0">© 2026 NexusAgency. All rights reserved.</p>
+          <p className="text-zinc-500 text-sm mb-8 md:mb-0">© 2026 Nexus Digital. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">Twitter</Link>
             <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">LinkedIn</Link>
