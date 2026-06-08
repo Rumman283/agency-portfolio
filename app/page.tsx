@@ -29,28 +29,32 @@ export default function Home() {
     <div className="min-h-screen bg-black text-zinc-50 font-sans selection:bg-purple-500/30 overflow-x-hidden relative">
       <AnimatedBackground />
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 border-b border-white/[0.02] bg-black/20 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            aria-label="Scroll to top"
-            className="group cursor-pointer text-left outline-none hover:opacity-80 active:scale-[0.98] transition-all duration-500"
-          >
-            <Logo />
-          </button>
-          <div className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest uppercase text-zinc-500">
-            <Link href="#services" className="hover:text-white transition-colors">Services</Link>
-            <Link href="#process" className="hover:text-white transition-colors">Process</Link>
-            <Link href="#portfolio" className="hover:text-white transition-colors">Portfolio</Link>
-            <Link href="#contact" className="relative group px-5 py-2 rounded-full overflow-hidden border border-white/10 hover:border-white/30 transition-colors ml-4">
-              <span className="relative text-zinc-300 group-hover:text-white transition-colors">Let's Talk</span>
-            </Link>
+      <div className="fixed top-6 w-full z-50 px-6 flex justify-center pointer-events-none">
+        <nav className="pointer-events-auto w-full max-w-5xl rounded-full border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl transition-all duration-500">
+          <div className="px-6 h-16 flex items-center justify-between">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              aria-label="Scroll to top"
+              className="group cursor-pointer text-left outline-none hover:opacity-80 active:scale-[0.98] transition-all duration-500 flex items-center"
+            >
+              <Logo />
+            </button>
+            <div className="hidden md:flex items-center gap-10 text-xs font-semibold tracking-widest uppercase text-zinc-400">
+              <Link href="#services" className="hover:text-white transition-colors">Services</Link>
+              <Link href="#process" className="hover:text-white transition-colors">Process</Link>
+              <Link href="#portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+              <Link href="#contact" className="relative group px-6 py-2.5 rounded-full overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 ml-4 shadow-[0_0_0_rgba(168,85,247,0)] hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="relative text-zinc-200 group-hover:text-white transition-colors">Let's Talk</span>
+              </Link>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 px-6">
+      <section className="relative pt-32 pb-10 md:pt-40 md:pb-12 px-6">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-b from-purple-500/30 to-blue-500/30 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center relative z-10">
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.02] border border-white/[0.05] text-sm font-medium text-zinc-300 mb-8 backdrop-blur-md shadow-2xl animate-fade-in-up">
             <span className="relative flex h-2 w-2">
@@ -59,12 +63,12 @@ export default function Home() {
             </span>
             Premium Creative Agency
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 max-w-5xl text-balance leading-[1.05] animate-fade-in-up delay-100">
-            Digital Products <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-purple-200 to-blue-300 animate-gradient-x">Built To Lead.</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 max-w-5xl text-balance leading-[1.05] animate-fade-in-up delay-100 relative">
+            Designing The Future <br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-purple-300 to-blue-400 animate-gradient-x drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]">Of Digital Brands.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl text-balance mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
-            We partner with visionary companies to design and engineer world-class digital experiences that define categories.
+          <p className="text-lg md:text-xl text-zinc-400 max-w-2xl text-balance mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
+            We help ambitious companies build world-class digital experiences, products, and brands that stand out in competitive markets.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center mb-16 animate-fade-in-up delay-300">
             {/* Primary CTA */}
@@ -310,12 +314,12 @@ export default function Home() {
                    </div>
                 </div>
                 <div className="flex items-center gap-5 text-zinc-300">
-                   <div className="w-14 h-14 rounded-full bg-white/[0.03] flex items-center justify-center border border-white/10 shadow-inner">
-                     <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                   <div className="w-14 h-14 rounded-full bg-white/[0.03] flex items-center justify-center border border-white/10 shadow-inner group-hover:bg-white/[0.05] transition-colors">
+                     <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                    </div>
                    <div>
-                     <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Visit Us</div>
-                     <div className="font-semibold text-white text-lg">120 Innovation Drive, NY</div>
+                     <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Remote Worldwide</div>
+                     <div className="font-semibold text-white text-lg">Available for projects globally.</div>
                    </div>
                 </div>
               </div>
@@ -334,11 +338,12 @@ export default function Home() {
           <div className="md:col-span-5 flex flex-col gap-6">
             <Logo />
             <p className="text-zinc-400 leading-relaxed max-w-sm mt-4">We are an independent digital studio forging world-class brands and products for the ambitious.</p>
+            <p className="text-zinc-500 font-medium text-sm mt-2 tracking-wide">Trusted by ambitious startups worldwide.</p>
             <div className="flex gap-4 mt-2">
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all hover:-translate-y-1">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
               </Link>
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all hover:-translate-y-1">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
               </Link>
             </div>
@@ -346,18 +351,18 @@ export default function Home() {
           
           <div className="md:col-span-2 flex flex-col gap-4">
             <h4 className="text-white font-semibold mb-2 tracking-wide">Studio</h4>
-            <Link href="#portfolio" className="text-zinc-400 hover:text-white transition-colors text-sm">Work</Link>
-            <Link href="#services" className="text-zinc-400 hover:text-white transition-colors text-sm">Capabilities</Link>
-            <Link href="#process" className="text-zinc-400 hover:text-white transition-colors text-sm">Process</Link>
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Careers</Link>
+            <Link href="#portfolio" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Work</Link>
+            <Link href="#services" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Capabilities</Link>
+            <Link href="#process" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Process</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Careers</Link>
           </div>
           
           <div className="md:col-span-2 flex flex-col gap-4">
             <h4 className="text-white font-semibold mb-2 tracking-wide">Social</h4>
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Instagram</Link>
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Twitter</Link>
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Dribbble</Link>
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Behance</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Instagram</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Twitter</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Dribbble</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Behance</Link>
           </div>
           
           <div className="md:col-span-3 flex flex-col gap-4">
@@ -502,27 +507,22 @@ function TestimonialCard({ quote, author, role, rating }: { quote: string, autho
 
 function Logo() {
   return (
-    <div className="flex items-center gap-3 group">
-      <div className="relative flex items-center justify-center w-9 h-9 transition-transform duration-700 group-hover:rotate-180">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">
-          <path d="M20 0L37.3205 10V30L20 40L2.67949 30V10L20 0Z" fill="url(#paint0_linear)" fillOpacity="0.8"/>
-          <path d="M20 5L33.3205 12.5V27.5L20 35L6.67949 27.5V12.5L20 5Z" fill="url(#paint1_linear)"/>
-          <path d="M20 12L27.3205 16.5V23.5L20 28L12.6795 23.5V16.5L20 12Z" fill="white" />
+    <div className="flex items-center gap-4 group">
+      <div className="relative flex items-center justify-center w-8 h-8 transition-transform duration-700 group-hover:scale-105">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]">
+          <path d="M20 0L40 40H28L20 24L12 40H0L20 0Z" fill="url(#paint0_linear)"/>
+          <path d="M12 28L20 12L28 28H12Z" fill="white" fillOpacity="0.1" stroke="white" strokeWidth="0.5"/>
           <defs>
             <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#8B5CF6"/>
-              <stop offset="1" stopColor="#3B82F6"/>
-            </linearGradient>
-            <linearGradient id="paint1_linear" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
               <stop stopColor="#A855F7"/>
-              <stop offset="1" stopColor="#2563EB"/>
+              <stop offset="1" stopColor="#3B82F6"/>
             </linearGradient>
           </defs>
         </svg>
       </div>
       <div className="flex flex-col justify-center leading-none">
-        <span className="font-extrabold text-xl tracking-[0.1em] text-white uppercase">Arqovia</span>
-        <span className="font-light text-[0.65rem] tracking-[0.3em] text-zinc-400 uppercase mt-0.5 group-hover:text-zinc-300 transition-colors">Digital Studio</span>
+        <span className="font-bold text-2xl tracking-[0.15em] text-white">ARQOVIA</span>
+        <span className="font-medium text-[0.6rem] tracking-[0.4em] text-zinc-400 mt-1 pl-1 group-hover:text-zinc-300 transition-colors">DIGITAL STUDIO</span>
       </div>
     </div>
   );
