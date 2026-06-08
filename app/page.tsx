@@ -26,7 +26,8 @@ export default function Home() {
   const filteredProjects = filter === "All" ? projects : projects.filter(p => p.category === filter);
 
   return (
-    <div className="min-h-screen bg-black text-zinc-50 font-sans selection:bg-purple-500/30 overflow-x-hidden">
+    <div className="min-h-screen bg-black text-zinc-50 font-sans selection:bg-purple-500/30 overflow-x-hidden relative">
+      <AnimatedBackground />
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 border-b border-white/[0.02] bg-black/20 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -50,10 +51,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 px-6">
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[150px] mix-blend-screen animate-pulse pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen animate-pulse pointer-events-none" style={{ animationDelay: '2s' }}></div>
-        
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center relative z-10">
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.02] border border-white/[0.05] text-sm font-medium text-zinc-300 mb-8 backdrop-blur-md shadow-2xl animate-fade-in-up">
             <span className="relative flex h-2 w-2">
@@ -653,3 +650,27 @@ function ContactForm() {
     </form>
   );
 }
+
+function AnimatedBackground() {
+  return (
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* Dark base */}
+      <div className="absolute inset-0 bg-[#030303]"></div>
+      
+      {/* Radial glow behind headline (centered) */}
+      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80vw] h-[600px] bg-gradient-to-b from-purple-600/20 via-blue-600/10 to-transparent blur-[120px] opacity-70"></div>
+      
+      {/* Floating orbs */}
+      <div className="absolute top-[10%] left-[15%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[150px] mix-blend-screen animate-float-slow"></div>
+      <div className="absolute top-[40%] right-[10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen animate-float-slow" style={{ animationDelay: '-5s' }}></div>
+      <div className="absolute bottom-[-10%] left-[30%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[150px] mix-blend-screen animate-float-slow" style={{ animationDelay: '-10s' }}></div>
+
+      {/* Subtle moving light beams */}
+      <div className="absolute inset-0 opacity-[0.02] animate-gradient-x" style={{ backgroundImage: 'linear-gradient(45deg, transparent 45%, white 50%, transparent 55%)' }}></div>
+      
+      {/* Subtle noise texture */}
+      <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
+    </div>
+  );
+}
+
