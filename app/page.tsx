@@ -35,8 +35,7 @@ export default function Home() {
             aria-label="Scroll to top"
             className="font-bold text-2xl tracking-tighter flex items-center gap-2 group cursor-pointer text-left outline-none hover:scale-[1.02] active:scale-[0.98] transition-transform duration-500"
           >
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500 shadow-[0_0_20px_rgba(168,85,247,0.4)] group-hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-500"></div>
-            Nexus<span className="text-zinc-500 font-light group-hover:text-zinc-300 transition-colors duration-500">Digital</span>
+            <Logo />
           </button>
           <div className="hidden md:flex items-center gap-10 text-sm font-medium text-zinc-400">
             <Link href="#services" className="hover:text-white transition-colors">Services</Link>
@@ -132,7 +131,7 @@ export default function Home() {
       <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">The Nexus Advantage</h2>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">The Arqovia Advantage</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto text-xl">Why businesses trust us with their complete digital presence and marketing spend.</p>
           </div>
           
@@ -290,7 +289,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-20 text-center">Don&apos;t Just Take Our Word For It</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard 
-              quote="Nexus Digital delivered an ecommerce platform that completely redefined our business. The conversion rate increase was immediate and substantial."
+              quote="Arqovia Digital delivered an ecommerce platform that completely redefined our business. The conversion rate increase was immediate and substantial."
               author="Sarah Jenkins"
               role="Founder, Lumina Ecommerce"
               rating={5}
@@ -331,7 +330,7 @@ export default function Home() {
                    </div>
                    <div>
                      <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Email Us</div>
-                     <div className="font-semibold text-white text-lg">hello@nexus.digital</div>
+                     <div className="font-semibold text-white text-lg">hello@arqovia.digital</div>
                    </div>
                 </div>
                 <div className="flex items-center gap-5 text-zinc-300">
@@ -357,10 +356,9 @@ export default function Home() {
       <footer className="py-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center gap-2 mb-8 md:mb-0">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500"></div>
-            <span className="font-bold text-xl tracking-tighter text-white">Nexus<span className="text-zinc-500 font-light">Digital</span></span>
+            <Logo />
           </div>
-          <p className="text-zinc-500 text-sm mb-8 md:mb-0">© 2026 Nexus Digital. All rights reserved.</p>
+          <p className="text-zinc-500 text-sm mb-8 md:mb-0">© 2026 Arqovia Digital. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">Twitter</Link>
             <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">LinkedIn</Link>
@@ -486,6 +484,20 @@ function TestimonialCard({ quote, author, role, rating }: { quote: string, autho
           <p className="text-zinc-500">{role}</p>
         </div>
       </div>
+    </div>
+  );
+}
+
+function Logo() {
+  return (
+    <div className="flex items-center gap-1 group">
+      <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-tr from-violet-600 via-purple-500 to-blue-500 shadow-[0_0_20px_rgba(139,92,246,0.5)] group-hover:shadow-[0_0_30px_rgba(139,92,246,0.8)] transition-all duration-500 mr-1">
+        <div className="absolute inset-[1px] rounded-full bg-gradient-to-b from-white/30 to-transparent mix-blend-overlay"></div>
+        <div className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.9)] animate-pulse"></div>
+      </div>
+      <span className="font-bold text-2xl tracking-tighter text-white">
+        Arqovia<span className="font-light text-zinc-400 group-hover:text-zinc-200 transition-colors duration-500 ml-1">Digital</span>
+      </span>
     </div>
   );
 }
