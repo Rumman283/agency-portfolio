@@ -28,48 +28,48 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-zinc-50 font-sans selection:bg-purple-500/30 overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 border-b border-white/[0.05] bg-black/40 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <nav className="fixed top-0 w-full z-50 border-b border-white/[0.02] bg-black/20 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Scroll to top"
-            className="font-bold text-2xl tracking-tighter flex items-center gap-2 group cursor-pointer text-left outline-none hover:scale-[1.02] active:scale-[0.98] transition-transform duration-500"
+            className="group cursor-pointer text-left outline-none hover:opacity-80 active:scale-[0.98] transition-all duration-500"
           >
             <Logo />
           </button>
-          <div className="hidden md:flex items-center gap-10 text-sm font-medium text-zinc-400">
+          <div className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest uppercase text-zinc-500">
             <Link href="#services" className="hover:text-white transition-colors">Services</Link>
             <Link href="#process" className="hover:text-white transition-colors">Process</Link>
             <Link href="#portfolio" className="hover:text-white transition-colors">Portfolio</Link>
-            <Link href="#contact" className="relative group px-6 py-2.5 rounded-full overflow-hidden">
-              <span className="absolute inset-0 w-full h-full bg-white transition-all duration-300 group-hover:scale-105"></span>
-              <span className="relative text-black font-semibold">Let&apos;s Talk</span>
+            <Link href="#contact" className="relative group px-5 py-2 rounded-full overflow-hidden border border-white/10 hover:border-white/30 transition-colors ml-4">
+              <span className="relative text-zinc-300 group-hover:text-white transition-colors">Let's Talk</span>
             </Link>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-6">
+      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 px-6">
         {/* Animated Background Elements */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-[120px] mix-blend-screen animate-pulse pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse pointer-events-none" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[150px] mix-blend-screen animate-pulse pointer-events-none"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen animate-pulse pointer-events-none" style={{ animationDelay: '2s' }}></div>
         
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center relative z-10">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] text-sm font-medium text-zinc-300 mb-10 backdrop-blur-md shadow-2xl animate-fade-in-up">
-            <span className="relative flex h-2.5 w-2.5">
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.02] border border-white/[0.05] text-sm font-medium text-zinc-300 mb-8 backdrop-blur-md shadow-2xl animate-fade-in-up">
+            <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
-            Full-Service Digital Agency
+            Premium Creative Agency
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 max-w-4xl text-balance leading-tight animate-fade-in-up delay-100">
-            We Build Brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-purple-300 to-blue-400 animate-gradient-x">That People Remember.</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 max-w-5xl text-balance leading-[1.05] animate-fade-in-up delay-100">
+            Digital Products <br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-purple-200 to-blue-300 animate-gradient-x">Built To Lead.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl text-balance mb-12 leading-relaxed font-light animate-fade-in-up delay-200">
-            Merging stunning visual design with data-driven marketing to scale ambitious local and global brands to new heights.
+          <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl text-balance mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
+            We partner with visionary companies to design and engineer world-class digital experiences that define categories.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center mb-24 animate-fade-in-up delay-300">
+          <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center mb-16 animate-fade-in-up delay-300">
             {/* Primary CTA */}
             <div className="relative group w-full sm:w-auto">
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 opacity-20 blur-md group-hover:opacity-60 transition duration-500 animate-gradient-x"></div>
@@ -87,42 +87,21 @@ export default function Home() {
               <span className="relative">Explore Our Work</span>
             </Link>
           </div>
-
-          {/* Statistics Bar */}
-          <div className="w-full max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-xl animate-fade-in-up delay-400">
-            <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold text-white mb-2">$50M+</span>
-              <span className="text-sm text-zinc-500 font-medium uppercase tracking-wider">Revenue Generated</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold text-white mb-2">200+</span>
-              <span className="text-sm text-zinc-500 font-medium uppercase tracking-wider">Projects Delivered</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold text-white mb-2">99%</span>
-              <span className="text-sm text-zinc-500 font-medium uppercase tracking-wider">Client Retention</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold text-white mb-2">15+</span>
-              <span className="text-sm text-zinc-500 font-medium uppercase tracking-wider">Industry Awards</span>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Trusted By Logos */}
-      <section className="py-10 border-y border-white/[0.05] bg-black/50 overflow-hidden flex relative">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
-        <div className="max-w-7xl mx-auto w-full px-6">
-          <p className="text-center text-sm font-medium text-zinc-600 uppercase tracking-widest mb-8">Trusted by industry leaders globally</p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-            {/* SVG Logo Placeholders using styled text for robustness */}
-            <div className="text-2xl font-bold tracking-tighter flex items-center gap-1"><span className="text-blue-500">▲</span> ACME</div>
-            <div className="text-2xl font-serif font-bold italic">Globex</div>
-            <div className="text-2xl font-bold tracking-widest uppercase flex items-center"><div className="w-4 h-4 bg-white rounded-sm mr-2 transform rotate-45"></div> SOYUZ</div>
+      <section className="py-12 border-y border-white/[0.02] bg-zinc-950/30 overflow-hidden flex relative animate-fade-in-up delay-400">
+        <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto w-full px-6 flex flex-col items-center">
+          <p className="text-center text-xs font-semibold text-zinc-500 uppercase tracking-[0.2em] mb-10">Trusted by global category leaders</p>
+          <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="text-xl font-bold tracking-tighter flex items-center gap-1.5"><svg className="w-5 h-5 text-zinc-100" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg> ACME CORP</div>
+            <div className="text-2xl font-serif font-bold italic tracking-tight">Globex</div>
+            <div className="text-xl font-bold tracking-widest uppercase flex items-center"><div className="w-3 h-3 bg-white rounded-sm mr-2 transform rotate-45"></div> SOYUZ</div>
             <div className="text-2xl font-black lowercase tracking-tighter">initech.</div>
-            <div className="text-2xl font-medium tracking-wide flex items-center gap-2"><div className="w-5 h-5 rounded-full border-4 border-white"></div> Massive</div>
+            <div className="text-xl font-medium tracking-wide flex items-center gap-2"><div className="w-4 h-4 rounded-full border-2 border-white"></div> Massive</div>
           </div>
         </div>
       </section>
@@ -353,16 +332,52 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center gap-2 mb-8 md:mb-0">
+      <footer className="pt-32 pb-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
+          <div className="md:col-span-5 flex flex-col gap-6">
             <Logo />
+            <p className="text-zinc-400 leading-relaxed max-w-sm mt-4">We are an independent digital studio forging world-class brands and products for the ambitious.</p>
+            <div className="flex gap-4 mt-2">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+              </Link>
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+              </Link>
+            </div>
           </div>
-          <p className="text-zinc-500 text-sm mb-8 md:mb-0">© 2026 Arqovia Digital. All rights reserved.</p>
-          <div className="flex gap-8">
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">Twitter</Link>
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">LinkedIn</Link>
-            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium">Instagram</Link>
+          
+          <div className="md:col-span-2 flex flex-col gap-4">
+            <h4 className="text-white font-semibold mb-2 tracking-wide">Studio</h4>
+            <Link href="#portfolio" className="text-zinc-400 hover:text-white transition-colors text-sm">Work</Link>
+            <Link href="#services" className="text-zinc-400 hover:text-white transition-colors text-sm">Capabilities</Link>
+            <Link href="#process" className="text-zinc-400 hover:text-white transition-colors text-sm">Process</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Careers</Link>
+          </div>
+          
+          <div className="md:col-span-2 flex flex-col gap-4">
+            <h4 className="text-white font-semibold mb-2 tracking-wide">Social</h4>
+            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Instagram</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Twitter</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Dribbble</Link>
+            <Link href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Behance</Link>
+          </div>
+          
+          <div className="md:col-span-3 flex flex-col gap-4">
+            <h4 className="text-white font-semibold mb-2 tracking-wide">Newsletter</h4>
+            <p className="text-zinc-500 text-sm mb-2">Insights on design, tech, and building brands.</p>
+            <form className="flex gap-2">
+              <input type="email" placeholder="Email address" className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white outline-none focus:border-purple-500 w-full" />
+              <button type="button" className="bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-zinc-200 transition-colors">Join</button>
+            </form>
+          </div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/[0.05]">
+          <p className="text-zinc-600 text-sm mb-4 md:mb-0">© 2026 Arqovia Digital Studio. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link href="#" className="text-zinc-600 hover:text-zinc-300 transition-colors text-sm">Privacy Policy</Link>
+            <Link href="#" className="text-zinc-600 hover:text-zinc-300 transition-colors text-sm">Terms of Service</Link>
           </div>
         </div>
       </footer>
@@ -490,14 +505,28 @@ function TestimonialCard({ quote, author, role, rating }: { quote: string, autho
 
 function Logo() {
   return (
-    <div className="flex items-center gap-1 group">
-      <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-tr from-violet-600 via-purple-500 to-blue-500 shadow-[0_0_20px_rgba(139,92,246,0.5)] group-hover:shadow-[0_0_30px_rgba(139,92,246,0.8)] transition-all duration-500 mr-1">
-        <div className="absolute inset-[1px] rounded-full bg-gradient-to-b from-white/30 to-transparent mix-blend-overlay"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.9)] animate-pulse"></div>
+    <div className="flex items-center gap-3 group">
+      <div className="relative flex items-center justify-center w-9 h-9 transition-transform duration-700 group-hover:rotate-180">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+          <path d="M20 0L37.3205 10V30L20 40L2.67949 30V10L20 0Z" fill="url(#paint0_linear)" fillOpacity="0.8"/>
+          <path d="M20 5L33.3205 12.5V27.5L20 35L6.67949 27.5V12.5L20 5Z" fill="url(#paint1_linear)"/>
+          <path d="M20 12L27.3205 16.5V23.5L20 28L12.6795 23.5V16.5L20 12Z" fill="white" />
+          <defs>
+            <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#8B5CF6"/>
+              <stop offset="1" stopColor="#3B82F6"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#A855F7"/>
+              <stop offset="1" stopColor="#2563EB"/>
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
-      <span className="font-bold text-2xl tracking-tighter text-white">
-        Arqovia<span className="font-light text-zinc-400 group-hover:text-zinc-200 transition-colors duration-500 ml-1">Digital</span>
-      </span>
+      <div className="flex flex-col justify-center leading-none">
+        <span className="font-extrabold text-xl tracking-[0.1em] text-white uppercase">Arqovia</span>
+        <span className="font-light text-[0.65rem] tracking-[0.3em] text-zinc-400 uppercase mt-0.5 group-hover:text-zinc-300 transition-colors">Digital Studio</span>
+      </div>
     </div>
   );
 }
