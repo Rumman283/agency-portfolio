@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { createClient } from "@/lib/supabase/client";
 
 export default function Home() {
   const [filter, setFilter] = useState("All");
@@ -573,12 +574,30 @@ function ContactForm() {
     e.preventDefault();
     if (validate()) {
       setIsSubmitting(true);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ name: '', email: '', company: '', budget: '', message: '' });
-      setTimeout(() => setIsSuccess(false), 5000);
+      try {
+        const supabase = createClient();
+        const { error } = await supabase
+          .from("contact_messages")
+          .insert([
+            {
+              name: formData.name,
+              email: formData.email,
+              company: formData.company || null,
+              budget: formData.budget,
+              message: formData.message,
+            },
+          ]);
+
+        if (error) throw error;
+
+        setIsSuccess(true);
+        setFormData({ name: '', email: '', company: '', budget: '', message: '' });
+        setTimeout(() => setIsSuccess(false), 5000);
+      } catch (err) {
+        console.error("Failed to submit contact form:", err);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
