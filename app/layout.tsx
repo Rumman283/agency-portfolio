@@ -13,13 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arqovia Digital | Premium Design & Development Agency",
-  description: "Arqovia Digital is a high-end international digital agency specializing in premium web development, graphic design, and marketing for ambitious brands.",
+  title: "Arqovia Digital Studio | Premium Web Design & Digital Experiences",
+  description: "We design premium websites, digital products and brands for ambitious startups and modern businesses.",
+  keywords: ["Digital Agency", "Web Design", "Premium Websites", "Branding", "Startups", "Next.js", "Luxury Design"],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
-    title: "Arqovia Digital | Premium Design & Development Agency",
-    description: "Arqovia Digital is a high-end international digital agency specializing in premium web development, graphic design, and marketing for ambitious brands.",
-    siteName: "Arqovia Digital",
+    title: "Arqovia Digital Studio | Premium Web Design & Digital Experiences",
+    description: "We design premium websites, digital products and brands for ambitious startups and modern businesses.",
+    siteName: "Arqovia Digital Studio",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arqovia Digital Studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arqovia Digital Studio | Premium Web Design & Digital Experiences",
+    description: "We design premium websites, digital products and brands for ambitious startups and modern businesses.",
+    images: ["/og-image.jpg"],
   },
 };
 

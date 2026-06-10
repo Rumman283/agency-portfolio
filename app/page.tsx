@@ -29,8 +29,8 @@ export default function Home() {
     <div className="min-h-screen bg-black text-zinc-50 font-sans selection:bg-purple-500/30 overflow-x-hidden relative">
       <AnimatedBackground />
       {/* Navigation */}
-      <div className="fixed top-6 w-full z-50 px-6 flex justify-center pointer-events-none">
-        <nav className="pointer-events-auto w-full max-w-5xl rounded-full border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl transition-all duration-500">
+      <div className="fixed top-5 w-full z-50 px-6 flex justify-center pointer-events-none">
+        <nav className="pointer-events-auto w-full max-w-5xl rounded-full border border-white/10 bg-black/40 backdrop-blur-xl shadow-[0_0_40px_rgba(139,92,246,0.12)] transition-all duration-500">
           <div className="px-6 h-16 flex items-center justify-between">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -45,7 +45,7 @@ export default function Home() {
               <Link href="#portfolio" className="hover:text-white transition-colors">Portfolio</Link>
               <Link href="#contact" className="relative group px-6 py-2.5 rounded-full overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 ml-4 shadow-[0_0_0_rgba(168,85,247,0)] hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative text-zinc-200 group-hover:text-white transition-colors">Let's Talk</span>
+                <span className="relative text-zinc-200 group-hover:text-white transition-colors">Let&apos;s Talk</span>
               </Link>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-10 md:pt-40 md:pb-12 px-6">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-b from-purple-500/30 to-blue-500/30 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-b from-purple-500/20 to-blue-500/20 rounded-full blur-[100px] mix-blend-screen pointer-events-none"></div>
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center relative z-10">
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.02] border border-white/[0.05] text-sm font-medium text-zinc-300 mb-8 backdrop-blur-md shadow-2xl animate-fade-in-up">
             <span className="relative flex h-2 w-2">
@@ -68,13 +68,13 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-purple-300 to-blue-400 animate-gradient-x drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]">Of Digital Brands.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl text-balance mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
-            We help ambitious companies build world-class digital experiences, products, and brands that stand out in competitive markets.
+            We build premium websites, digital identities and growth systems for ambitious startups and modern businesses.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center mb-16 animate-fade-in-up delay-300">
             {/* Primary CTA */}
             <div className="relative group w-full sm:w-auto">
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 opacity-20 blur-md group-hover:opacity-60 transition duration-500 animate-gradient-x"></div>
-              <Link href="#contact" className="relative flex h-14 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-white px-8 text-sm font-semibold text-black transition-all hover:bg-zinc-50 active:scale-[0.98] scale-100 group-hover:scale-[1.02]">
+              <Link href="#contact" className="relative flex h-14 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-white px-8 text-sm font-semibold text-black transition-all hover:bg-zinc-50 active:scale-[0.98] scale-100 hover:scale-[1.05] group-hover:scale-[1.05]">
                 Start a Project
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -83,32 +83,49 @@ export default function Home() {
             </div>
 
             {/* Secondary CTA */}
-            <Link href="#portfolio" className="group relative flex h-14 w-full sm:w-auto items-center justify-center rounded-full border border-white/10 bg-black/20 px-8 text-sm font-medium text-zinc-300 backdrop-blur-xl transition-all hover:border-white/20 hover:text-white active:scale-[0.98]">
+            <Link href="#portfolio" className="group relative flex h-14 w-full sm:w-auto items-center justify-center rounded-full border border-white/10 bg-black/20 px-8 text-sm font-medium text-zinc-300 backdrop-blur-xl transition-all hover:border-white/20 hover:text-white active:scale-[0.98] hover:scale-[1.02]">
               <span className="absolute inset-0 rounded-full bg-gradient-to-r from-white/0 via-white/[0.05] to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              <span className="relative">Explore Our Work</span>
+              <span className="relative">View Selected Work</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Trusted By Logos */}
-      <section className="py-12 border-y border-white/[0.02] bg-zinc-950/30 overflow-hidden flex relative animate-fade-in-up delay-400">
+      <section className="py-16 md:py-20 lg:py-28 border-y border-white/[0.02] bg-zinc-950/30 overflow-hidden flex relative animate-fade-in-up delay-400">
         <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto w-full px-6 flex flex-col items-center">
           <p className="text-center text-xs font-semibold text-zinc-500 uppercase tracking-[0.2em] mb-10">Trusted by global category leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-            <div className="text-xl font-bold tracking-tighter flex items-center gap-1.5"><svg className="w-5 h-5 text-zinc-100" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z" /></svg> ACME CORP</div>
-            <div className="text-2xl font-serif font-bold italic tracking-tight">Globex</div>
-            <div className="text-xl font-bold tracking-widest uppercase flex items-center"><div className="w-3 h-3 bg-white rounded-sm mr-2 transform rotate-45"></div> SOYUZ</div>
-            <div className="text-2xl font-black lowercase tracking-tighter">initech.</div>
-            <div className="text-xl font-medium tracking-wide flex items-center gap-2"><div className="w-4 h-4 rounded-full border-2 border-white"></div> Massive</div>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-700">
+            <div className="text-2xl font-bold tracking-tighter">Stripe</div>
+            <div className="text-2xl font-bold tracking-tight flex items-center gap-2">
+              <svg viewBox="0 0 116 100" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" clipRule="evenodd" d="M57.5 0L115 100H0L57.5 0z"/></svg> Vercel
+            </div>
+            <div className="text-2xl font-bold tracking-tight">Framer</div>
+            <div className="text-2xl font-bold tracking-tight">Notion</div>
+            <div className="text-2xl font-bold tracking-tight">Linear</div>
+          </div>
+          
+          <div className="mt-16 flex flex-col items-center">
+            <p className="text-center text-xs font-semibold text-zinc-600 uppercase tracking-[0.2em] mb-6">Built With</p>
+            <div className="flex flex-wrap justify-center items-center gap-4 text-sm font-medium text-zinc-400">
+              <span>Next.js</span>
+              <span className="text-zinc-700">•</span>
+              <span>React</span>
+              <span className="text-zinc-700">•</span>
+              <span>TypeScript</span>
+              <span className="text-zinc-700">•</span>
+              <span>Tailwind CSS</span>
+              <span className="text-zinc-700">•</span>
+              <span>Vercel</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us (Bento Grid) */}
-      <section className="py-32 px-6">
+      <section className="py-16 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">The Arqovia Advantage</h2>
@@ -159,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* Services Section with Gradient Borders */}
-      <section id="services" className="py-32 px-6 border-t border-white/[0.05] relative bg-zinc-950/20">
+      <section id="services" className="py-16 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] relative bg-zinc-950/20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <div className="max-w-2xl">
@@ -203,27 +220,28 @@ export default function Home() {
       </section>
 
       {/* Our Process Section */}
-      <section id="process" className="py-32 px-6">
+      <section id="process" className="py-16 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">How We Work</h2>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Our Process</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto text-xl">A proven methodology that turns your business goals into tangible results.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
             {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-12 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
-            <ProcessStep num="01" title="Discovery" desc="Deep-dive into your business goals, target audience, and competitive landscape." delay="" />
-            <ProcessStep num="02" title="Strategy" desc="Architecting the campaign, defining the brand voice, and establishing targets." delay="md:mt-12" />
-            <ProcessStep num="03" title="Creation" desc="Producing high-quality designs, developing the site, and editing the media." delay="" />
-            <ProcessStep num="04" title="Growth" desc="Launching campaigns, analyzing data, and continuously optimizing for scale." delay="md:mt-12" />
+            <ProcessStep num="01" title="Discovery" desc="Deep-dive into your business goals and competitive landscape." delay="" />
+            <ProcessStep num="02" title="Strategy" desc="Architecting the plan, defining targets and brand voice." delay="md:mt-12" />
+            <ProcessStep num="03" title="Design" desc="Crafting premium aesthetics and intuitive user experiences." delay="" />
+            <ProcessStep num="04" title="Development" desc="Building scalable, robust, and lightning-fast solutions." delay="md:mt-12" />
+            <ProcessStep num="05" title="Launch" desc="Deploying, analyzing data, and continuously optimizing." delay="" />
           </div>
         </div>
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-32 px-6 border-t border-white/[0.05] bg-zinc-950/40">
+      <section id="portfolio" className="py-16 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/40">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Featured Case Studies</h2>
@@ -264,34 +282,49 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-32 px-6 border-t border-white/[0.05]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-20 text-center">Don&apos;t Just Take Our Word For It</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TestimonialCard
-              quote="Arqovia Digital delivered an ecommerce platform that completely redefined our business. The conversion rate increase was immediate and substantial."
-              author="Sarah Jenkins"
-              role="Founder, Lumina Ecommerce"
-              rating={5}
-            />
-            <TestimonialCard
-              quote="Their Facebook ads and lead generation strategies brought us more qualified real estate leads in one month than we had in the entire previous year."
-              author="David Chen"
-              role="Director, Horizon Real Estate"
-              rating={5}
-            />
-            <TestimonialCard
-              quote="The video editing team completely transformed our YouTube channel. Our retention rate tripled, and the cinematic quality sets us apart from everyone."
-              author="Elena Rodriguez"
-              role="Creator, TechFlow"
-              rating={5}
-            />
+      <section id="testimonials" className="py-16 md:py-20 lg:py-28 px-6 border-t border-white/[0.05]">
+        <div className="max-w-4xl mx-auto">
+          <div className="p-12 md:p-20 rounded-[2.5rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] relative hover:border-white/10 transition-colors text-center shadow-2xl backdrop-blur-sm group">
+            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+            <div className="flex justify-center gap-1 mb-8">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <h2 className="text-3xl md:text-5xl text-zinc-200 leading-tight md:leading-tight mb-12 font-medium tracking-tight relative z-10">&quot;Arqovia transformed our digital presence with a fast, elegant and conversion-focused website.&quot;</h2>
+            <div className="flex flex-col items-center gap-4 relative z-10">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-zinc-800 to-zinc-700 flex items-center justify-center font-bold text-2xl border border-white/10 shadow-inner">
+                F
+              </div>
+              <div>
+                <h4 className="font-bold text-white text-lg tracking-wide">Founder</h4>
+                <p className="text-zinc-500 text-sm uppercase tracking-widest">Modern Commerce Co.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/20">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Frequently Asked Questions</h2>
+            <p className="text-zinc-400 text-lg">Everything you need to know about partnering with us.</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <FAQItem question="How long does a project take?" answer="Typically, our standard website projects take between 4 to 8 weeks from discovery to launch, depending on the complexity and requirements." />
+            <FAQItem question="What services do you offer?" answer="We offer a comprehensive suite of digital services including premium web design, full-stack development, brand identity creation, and performance marketing." />
+            <FAQItem question="Do you work internationally?" answer="Yes, we are a remote-first agency and collaborate with ambitious startups and modern businesses globally." />
+            <FAQItem question="How do we get started?" answer="Simply reach out via our contact form to schedule an initial discovery call. We'll discuss your goals, timeline, and how we can best support your vision." />
           </div>
         </div>
       </section>
 
       {/* Contact CTA Section */}
-      <section id="contact" className="py-40 px-6 relative overflow-hidden border-t border-white/[0.05]">
+      <section id="contact" className="py-16 md:py-20 lg:py-28 px-6 relative overflow-hidden border-t border-white/[0.05]">
         {/* Glow effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-b from-purple-900/20 to-blue-900/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
@@ -313,13 +346,15 @@ export default function Home() {
                     <div className="font-semibold text-white text-lg">hello@arqovia.digital</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-5 text-zinc-300">
-                  <div className="w-14 h-14 rounded-full bg-white/[0.03] flex items-center justify-center border border-white/10 shadow-inner group-hover:bg-white/[0.05] transition-colors">
+                <div className="flex items-start gap-5 text-zinc-300">
+                  <div className="w-14 h-14 rounded-full bg-white/[0.03] flex shrink-0 items-center justify-center border border-white/10 shadow-inner group-hover:bg-white/[0.05] transition-colors">
                     <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Remote Worldwide</div>
-                    <div className="font-semibold text-white text-lg">Available for projects globally.</div>
+                    <div className="font-semibold text-white text-lg mb-1">Available for projects globally.</div>
+                    <div className="text-sm text-zinc-400 font-light mb-0.5">Typically responding within 24 hours.</div>
+                    <div className="text-sm text-zinc-400 font-light">Available for startups, agencies and growing brands.</div>
                   </div>
                 </div>
               </div>
@@ -333,7 +368,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="pt-32 pb-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
+      <footer className="pt-16 md:pt-20 lg:pt-28 pb-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
           <div className="md:col-span-5 flex flex-col gap-6">
             <Logo />
@@ -376,7 +411,10 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/[0.05]">
-          <p className="text-zinc-600 text-sm mb-4 md:mb-0">© 2026 Arqovia Digital Studio. All rights reserved.</p>
+          <div className="text-zinc-600 text-sm mb-4 md:mb-0 flex flex-col items-center md:items-start gap-1">
+            <span>© 2026 Arqovia Digital Studio.</span>
+            <span>Crafted with precision. Built for ambitious brands.</span>
+          </div>
           <div className="flex gap-6">
             <Link href="#" className="text-zinc-600 hover:text-zinc-300 transition-colors text-sm">Privacy Policy</Link>
             <Link href="#" className="text-zinc-600 hover:text-zinc-300 transition-colors text-sm">Terms of Service</Link>
@@ -479,31 +517,7 @@ function ProjectCard({ title, category, gradient, metric }: { title: string, cat
   );
 }
 
-function TestimonialCard({ quote, author, role, rating }: { quote: string, author: string, role: string, rating: number }) {
-  return (
-    <div className="p-12 rounded-[2rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] relative hover:border-white/10 transition-colors h-full flex flex-col justify-between">
-      <div>
-        <div className="flex gap-1 mb-8">
-          {[...Array(rating)].map((_, i) => (
-            <svg key={i} className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ))}
-        </div>
-        <p className="text-xl text-zinc-300 leading-relaxed mb-10 font-light">&quot;{quote}&quot;</p>
-      </div>
-      <div className="flex items-center gap-5">
-        <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-zinc-800 to-zinc-700 flex items-center justify-center font-bold text-xl border border-white/10 shadow-inner">
-          {author.charAt(0)}
-        </div>
-        <div>
-          <h4 className="font-bold text-white text-lg">{author}</h4>
-          <p className="text-zinc-500">{role}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
+
 
 function Logo() {
   return (
@@ -535,7 +549,7 @@ function ContactForm() {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const validate = () => {
-    let newErrors: Record<string, string> = {};
+    const newErrors: Record<string, string> = {};
     if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
@@ -652,24 +666,67 @@ function ContactForm() {
 }
 
 function AnimatedBackground() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Dark base */}
       <div className="absolute inset-0 bg-[#030303]"></div>
 
+      {/* Mouse following glow */}
+      <div 
+        className="absolute w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[120px] mix-blend-screen transition-all duration-700 ease-out"
+        style={{
+          transform: `translate(${mousePosition.x - 400}px, ${mousePosition.y - 400}px)`,
+        }}
+      ></div>
+
       {/* Radial glow behind headline (centered) */}
-      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80vw] h-[600px] bg-gradient-to-b from-purple-600/20 via-blue-600/10 to-transparent blur-[120px] opacity-70"></div>
+      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80vw] h-[600px] bg-gradient-to-b from-purple-600/10 via-blue-600/5 to-transparent blur-[120px] opacity-70"></div>
 
       {/* Floating orbs */}
-      <div className="absolute top-[10%] left-[15%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[150px] mix-blend-screen animate-float-slow"></div>
-      <div className="absolute top-[40%] right-[10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen animate-float-slow" style={{ animationDelay: '-5s' }}></div>
-      <div className="absolute bottom-[-10%] left-[30%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[150px] mix-blend-screen animate-float-slow" style={{ animationDelay: '-10s' }}></div>
+      <div className="absolute top-[10%] left-[15%] w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[150px] mix-blend-screen animate-float-slow"></div>
+      <div className="absolute top-[40%] right-[10%] w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[150px] mix-blend-screen animate-float-slow" style={{ animationDelay: '-5s' }}></div>
+      <div className="absolute bottom-[-10%] left-[30%] w-[600px] h-[600px] bg-indigo-600/5 rounded-full blur-[150px] mix-blend-screen animate-float-slow" style={{ animationDelay: '-10s' }}></div>
 
       {/* Subtle moving light beams */}
       <div className="absolute inset-0 opacity-[0.02] animate-gradient-x" style={{ backgroundImage: 'linear-gradient(45deg, transparent 45%, white 50%, transparent 55%)' }}></div>
 
       {/* Subtle noise texture */}
       <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
+    </div>
+  );
+}
+
+function FAQItem({ question, answer }: { question: string, answer: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border border-white/10 rounded-2xl bg-white/[0.02] overflow-hidden transition-all duration-300 hover:border-white/20">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
+      >
+        <span className="font-semibold text-zinc-200 text-lg">{question}</span>
+        <span className={`w-8 h-8 rounded-full flex items-center justify-center bg-white/5 border border-white/10 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+          <svg className="w-4 h-4 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </span>
+      </button>
+      <div
+        className={`px-6 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-40 pb-6 opacity-100' : 'max-h-0 opacity-0'}`}
+      >
+        <p className="text-zinc-400 leading-relaxed">{answer}</p>
+      </div>
     </div>
   );
 }
