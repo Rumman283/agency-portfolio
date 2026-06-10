@@ -1,9 +1,15 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fafafa; /* zinc-50 */
+    --foreground: #09090b; /* zinc-950 */
+  }
+
+  .dark {
+    --background: #000000;
+    --foreground: #fafafa;
   }
 
   body {
