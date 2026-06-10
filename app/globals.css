@@ -1,10 +1,12 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:is(.dark *));
 
 @layer base {
   :root {
-    --background: #fafafa; /* zinc-50 */
-    --foreground: #09090b; /* zinc-950 */
+    --background: #fafafa;
+    /* zinc-50 */
+    --foreground: #09090b;
+    /* zinc-950 */
   }
 
   .dark {
@@ -21,8 +23,17 @@
 
 @layer utilities {
   @keyframes fade-in-up {
-    0% { opacity: 0; transform: translateY(20px); filter: blur(5px); }
-    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(5px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
   }
 
   .animate-fade-in-up {
@@ -30,21 +41,50 @@
     opacity: 0;
   }
 
-  .delay-100 { animation-delay: 100ms; }
-  .delay-200 { animation-delay: 200ms; }
-  .delay-300 { animation-delay: 300ms; }
-  .delay-400 { animation-delay: 400ms; }
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
 
   @keyframes float-slow {
-    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-    33% { transform: translate(30px, -50px) rotate(10deg) scale(1.05); }
-    66% { transform: translate(-20px, 20px) rotate(-5deg) scale(0.95); }
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    33% {
+      transform: translate(30px, -50px) rotate(10deg) scale(1.05);
+    }
+
+    66% {
+      transform: translate(-20px, 20px) rotate(-5deg) scale(0.95);
+    }
   }
 
   @keyframes gradient-x {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .animate-float-slow {
