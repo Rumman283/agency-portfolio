@@ -54,7 +54,7 @@ export default function Home() {
 
       <main className="relative z-10 flex flex-col w-full">
         {/* Hero Section */}
-        <section className="relative pt-24 pb-8 md:pt-40 md:pb-12 px-6">
+        <section className="relative pt-24 pb-4 md:pt-40 md:pb-12 px-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-b from-purple-500/10 md:from-purple-500/20 to-blue-500/10 md:to-blue-500/20 rounded-full blur-[80px] md:blur-[100px] mix-blend-screen pointer-events-none"></div>
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center relative z-10">
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.02] border border-white/[0.05] text-sm font-medium text-zinc-300 mb-8 backdrop-blur-md shadow-2xl animate-fade-in-up">
@@ -71,7 +71,7 @@ export default function Home() {
           <p className="text-base md:text-lg lg:text-xl text-zinc-400 max-w-2xl text-balance mb-6 md:mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
             We build premium websites, digital identities and growth systems for ambitious startups and modern businesses.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full justify-center mb-10 md:mb-16 animate-fade-in-up delay-300">
+          <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full justify-center mb-0 md:mb-16 animate-fade-in-up delay-300">
             {/* Primary CTA */}
             <div className="relative group w-full sm:w-auto">
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 opacity-20 blur-md group-hover:opacity-60 transition duration-500 animate-gradient-x"></div>
@@ -98,7 +98,7 @@ export default function Home() {
         <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto w-full px-6 flex flex-col items-center">
           <p className="text-center text-xs font-semibold text-zinc-500 uppercase tracking-[0.2em] mb-4 md:mb-10">Trusted by global category leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-700">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-60 md:opacity-40 hover:opacity-100 transition-opacity duration-700">
             <div className="text-2xl font-bold tracking-tighter">Stripe</div>
             <div className="text-2xl font-bold tracking-tight flex items-center gap-2">
               <svg viewBox="0 0 116 100" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" clipRule="evenodd" d="M57.5 0L115 100H0L57.5 0z"/></svg> Vercel
@@ -110,7 +110,7 @@ export default function Home() {
           
           <div className="mt-8 md:mt-16 flex flex-col items-center">
             <p className="text-center text-xs font-semibold text-zinc-600 uppercase tracking-[0.2em] mb-3 md:mb-6">Built With</p>
-            <div className="flex flex-wrap justify-center items-center gap-4 text-sm font-medium text-zinc-400">
+            <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 md:gap-4 text-base md:text-sm font-medium tracking-wide text-zinc-300 md:text-zinc-400">
               <span>Next.js</span>
               <span className="text-zinc-700">•</span>
               <span>React</span>
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us (Bento Grid) */}
-      <section className="py-14 md:py-20 lg:py-28 px-6">
+      <section className="pt-8 pb-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 md:mb-20">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">The Arqovia Advantage</h2>
@@ -135,7 +135,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             <div className="md:col-span-2 p-6 md:p-10 rounded-3xl bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.05] hover:border-white/10 transition-colors relative overflow-hidden group">
-              <div className="absolute right-0 top-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-colors duration-500"></div>
+              <div className="absolute right-0 top-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-colors duration-500 pointer-events-none"></div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Technical & Creative Excellence</h3>
               <p className="text-zinc-400 text-base md:text-lg max-w-md leading-relaxed mb-8">We don&apos;t just build basic websites; we engineer robust digital experiences and craft stunning brand identities that leave a lasting mark on your industry.</p>
               <div className="flex flex-wrap gap-3 md:gap-4">
@@ -166,7 +166,7 @@ export default function Home() {
             <div className="md:col-span-2 p-6 md:p-10 rounded-3xl bg-gradient-to-tr from-transparent via-white/[0.02] to-blue-900/10 border border-white/[0.05] hover:border-white/10 transition-colors relative overflow-hidden group">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Award-Winning Execution</h3>
               <p className="text-zinc-400 text-base md:text-lg max-w-xl leading-relaxed mb-8">Aesthetics meet conversion. We design websites, ads, and videos that not only look breathtaking but are meticulously crafted to drive sales.</p>
-              <div className="absolute right-10 bottom-10 opacity-50 group-hover:opacity-100 transition-opacity hidden md:block">
+              <div className="absolute right-10 bottom-10 opacity-50 group-hover:opacity-100 transition-opacity hidden md:block pointer-events-none">
                 <svg className="w-24 h-24 text-zinc-700" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13h-13L12 6.5z" />
                 </svg>
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* Services Section with Gradient Borders */}
-      <section id="services" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] relative bg-zinc-950/20">
+      <section id="services" className="pt-8 pb-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] relative bg-zinc-950/20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-20 gap-6 md:gap-8">
             <div className="max-w-2xl">
@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* Our Process Section */}
-      <section id="process" className="py-14 md:py-20 lg:py-28 px-6">
+      <section id="process" className="pt-8 pb-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 md:mb-20">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">Our Process</h2>
@@ -242,7 +242,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/40">
+      <section id="portfolio" className="pt-8 pb-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/40">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">Featured Case Studies</h2>
@@ -273,7 +273,7 @@ export default function Home() {
             )}
           </div>
 
-          <div className="mt-10 md:mt-20">
+          <div className="mt-6 md:mt-20">
             <Link href="#contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 hover:border-white/30 transition-all group">
               <span className="font-semibold text-white">View Full Archive</span>
               <ArrowRightIcon />
@@ -283,7 +283,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05]">
+      <section id="testimonials" className="pt-8 pb-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05]">
         <div className="max-w-4xl mx-auto">
           <div className="p-6 py-8 md:p-20 rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] relative hover:border-white/10 transition-colors text-center shadow-2xl backdrop-blur-sm group h-auto min-h-fit flex flex-col justify-center">
             <div className="absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
@@ -309,7 +309,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/20">
+      <section id="faq" className="pt-8 pb-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/20">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">Frequently Asked Questions</h2>
@@ -369,7 +369,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="pt-14 md:pt-20 lg:pt-28 pb-10 md:pb-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
+      <footer className="pt-8 md:pt-20 lg:pt-28 pb-10 md:pb-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-10 md:mb-24">
           <div className="md:col-span-5 flex flex-col gap-6">
             <Logo />
@@ -429,11 +429,11 @@ export default function Home() {
         href="https://wa.me/1234567890"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-50 group flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-emerald-600 to-green-400 text-white shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] hover:scale-110 active:scale-95 transition-all duration-300"
+        className="fixed bottom-5 right-4 md:bottom-8 md:right-8 z-50 group flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-tr from-emerald-600 to-green-400 text-white shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] hover:scale-110 active:scale-95 transition-all duration-300"
         aria-label="Contact us on WhatsApp"
       >
         <div className="absolute inset-0 rounded-full bg-green-400 opacity-20 group-hover:animate-ping"></div>
-        <svg className="w-8 h-8 relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-7 h-7 md:w-8 md:h-8 relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
         </svg>
       </a>
@@ -486,8 +486,8 @@ function ProjectCard({ title, category, gradient, metric }: { title: string, cat
     <div className="group cursor-pointer flex flex-col h-auto md:h-full w-full">
       <div className={`w-full aspect-[16/10] rounded-3xl mb-8 bg-gradient-to-br ${gradient} overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]`}>
         {/* Abstract shapes inside the gradient for texture */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl mix-blend-overlay"></div>
-        <div className="absolute bottom-0 left-0 w-40 h-40 bg-black/20 rounded-full blur-2xl"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl mix-blend-overlay pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-black/20 rounded-full blur-2xl pointer-events-none"></div>
 
         {/* Interactive hover overlay */}
         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700"></div>
