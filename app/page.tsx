@@ -250,12 +250,12 @@ export default function Home() {
           </div>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-16 bg-white/[0.02] p-2 rounded-full border border-white/[0.05]">
+          <div className="flex w-[calc(100%+3rem)] -ml-6 pl-6 pr-6 md:w-auto md:m-0 md:p-2 overflow-x-auto items-center justify-start md:justify-center md:flex-wrap gap-2 md:gap-3 mb-8 md:mb-16 md:bg-white/[0.02] py-2 md:py-2 md:rounded-full md:border md:border-white/[0.05] after:content-[''] after:w-4 after:shrink-0 md:after:hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat ? 'bg-white text-black shadow-lg' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                className={`h-10 md:h-auto whitespace-nowrap rounded-full px-5 md:px-6 py-0 md:py-2.5 text-sm transition-all duration-300 flex items-center shrink-0 ${filter === cat ? 'bg-white text-black font-semibold md:font-medium shadow-[0_0_15px_rgba(255,255,255,0.2)] md:shadow-lg border border-transparent' : 'bg-white/[0.05] md:bg-transparent border border-white/10 md:border-transparent text-zinc-400 hover:text-white hover:bg-white/[0.1] md:hover:bg-white/5 font-medium'}`}
               >
                 {cat}
               </button>
