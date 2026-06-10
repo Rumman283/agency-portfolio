@@ -25,3 +25,20 @@ export async function getPortfolioProjects(): Promise<PortfolioProject[]> {
 
   return data || []
 }
+
+export async function getPortfolioProjectById(id: string): Promise<PortfolioProject | null> {
+  const supabase = await createClient()
+  
+  const { data, error } = await supabase
+    .from('portfolio_projects')
+    .select('*')
+    .eq('id', id)
+    .single()
+
+  if (error) {
+    console.error(`Error fetching portfolio project ${id}:`, error)
+    return null
+  }
+
+  return data
+}

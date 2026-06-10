@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { createPortfolioProject } from '@/app/admin/portfolio/actions';
+import { createPortfolioProject, updatePortfolioProject } from '@/app/admin/portfolio/actions';
+import { PortfolioProject } from '@/lib/supabase/portfolio';
 
-export default function PortfolioForm() {
+export default function PortfolioForm({ initialData }: { initialData?: PortfolioProject }) {
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -15,7 +16,11 @@ export default function PortfolioForm() {
     const formData = new FormData(event.currentTarget);
     
     try {
-      await createPortfolioProject(formData);
+      if (initialData) {
+        await updatePortfolioProject(initialData.id, formData);
+      } else {
+        await createPortfolioProject(formData);
+      }
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.';
       setError(errorMessage);
@@ -39,6 +44,7 @@ export default function PortfolioForm() {
             name="title"
             type="text"
             required
+            defaultValue={initialData?.title}
             className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-black border border-black/10 dark:border-white/10 rounded-xl outline-none focus:border-purple-500 transition-colors text-zinc-900 dark:text-white"
             placeholder="e.g. Lumina E-Commerce"
           />
@@ -51,6 +57,7 @@ export default function PortfolioForm() {
             name="category"
             type="text"
             required
+            defaultValue={initialData?.category}
             className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-black border border-black/10 dark:border-white/10 rounded-xl outline-none focus:border-purple-500 transition-colors text-zinc-900 dark:text-white"
             placeholder="e.g. Web App"
           />
@@ -64,6 +71,7 @@ export default function PortfolioForm() {
           name="description"
           required
           rows={4}
+          defaultValue={initialData?.description}
           className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-black border border-black/10 dark:border-white/10 rounded-xl outline-none focus:border-purple-500 transition-colors text-zinc-900 dark:text-white resize-none"
           placeholder="Briefly describe the project and goals..."
         />
@@ -76,6 +84,7 @@ export default function PortfolioForm() {
           name="image_url"
           type="text"
           required
+          defaultValue={initialData?.image_url}
           className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-black border border-black/10 dark:border-white/10 rounded-xl outline-none focus:border-purple-500 transition-colors text-zinc-900 dark:text-white"
           placeholder="https://example.com/image.jpg or /local-path.jpg"
         />
@@ -88,6 +97,7 @@ export default function PortfolioForm() {
           id="project_url"
           name="project_url"
           type="url"
+          defaultValue={initialData?.project_url || ''}
           className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-black border border-black/10 dark:border-white/10 rounded-xl outline-none focus:border-purple-500 transition-colors text-zinc-900 dark:text-white"
           placeholder="https://example.com"
         />
@@ -101,6 +111,8 @@ export default function PortfolioForm() {
         >
           {isPending ? (
             <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+          ) : initialData ? (
+            'Update Project'
           ) : (
             'Save Project'
           )}
