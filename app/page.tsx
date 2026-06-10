@@ -54,7 +54,7 @@ export default function Home() {
 
       <main className="relative z-10 flex flex-col w-full">
         {/* Hero Section */}
-        <section className="relative pt-24 pb-4 md:pt-40 md:pb-12 px-6">
+        <section className="relative pt-24 pb-12 md:pt-40 md:pb-12 px-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-b from-purple-500/10 md:from-purple-500/20 to-blue-500/10 md:to-blue-500/20 rounded-full blur-[80px] md:blur-[100px] mix-blend-screen pointer-events-none"></div>
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center relative z-10">
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.02] border border-white/[0.05] text-sm font-medium text-zinc-300 mb-8 backdrop-blur-md shadow-2xl animate-fade-in-up">
