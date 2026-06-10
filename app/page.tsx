@@ -53,7 +53,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-28 pb-10 md:pt-40 md:pb-12 px-6">
+      <section className="relative pt-24 pb-8 md:pt-40 md:pb-12 px-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-b from-purple-500/10 md:from-purple-500/20 to-blue-500/10 md:to-blue-500/20 rounded-full blur-[80px] md:blur-[100px] mix-blend-screen pointer-events-none"></div>
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center relative z-10">
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.02] border border-white/[0.05] text-sm font-medium text-zinc-300 mb-8 backdrop-blur-md shadow-2xl animate-fade-in-up">
@@ -67,10 +67,10 @@ export default function Home() {
             Designing The Future <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-purple-300 to-blue-400 animate-gradient-x drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]">Of Digital Brands.</span>
           </h1>
-          <p className="text-base md:text-lg lg:text-xl text-zinc-400 max-w-2xl text-balance mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
+          <p className="text-base md:text-lg lg:text-xl text-zinc-400 max-w-2xl text-balance mb-6 md:mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
             We build premium websites, digital identities and growth systems for ambitious startups and modern businesses.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center mb-16 animate-fade-in-up delay-300">
+          <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full justify-center mb-10 md:mb-16 animate-fade-in-up delay-300">
             {/* Primary CTA */}
             <div className="relative group w-full sm:w-auto">
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 opacity-20 blur-md group-hover:opacity-60 transition duration-500 animate-gradient-x"></div>
@@ -92,11 +92,11 @@ export default function Home() {
       </section>
 
       {/* Trusted By Logos */}
-      <section className="py-14 md:py-18 lg:py-28 border-y border-white/[0.02] bg-zinc-950/30 overflow-hidden flex relative animate-fade-in-up delay-400">
+      <section className="py-14 md:py-20 lg:py-28 border-y border-white/[0.02] bg-zinc-950/30 overflow-hidden flex relative animate-fade-in-up delay-400">
         <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto w-full px-6 flex flex-col items-center">
-          <p className="text-center text-xs font-semibold text-zinc-500 uppercase tracking-[0.2em] mb-6 md:mb-10">Trusted by global category leaders</p>
+          <p className="text-center text-xs font-semibold text-zinc-500 uppercase tracking-[0.2em] mb-4 md:mb-10">Trusted by global category leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-700">
             <div className="text-2xl font-bold tracking-tighter">Stripe</div>
             <div className="text-2xl font-bold tracking-tight flex items-center gap-2">
@@ -107,8 +107,8 @@ export default function Home() {
             <div className="text-2xl font-bold tracking-tight">Linear</div>
           </div>
           
-          <div className="mt-10 md:mt-16 flex flex-col items-center">
-            <p className="text-center text-xs font-semibold text-zinc-600 uppercase tracking-[0.2em] mb-4 md:mb-6">Built With</p>
+          <div className="mt-8 md:mt-16 flex flex-col items-center">
+            <p className="text-center text-xs font-semibold text-zinc-600 uppercase tracking-[0.2em] mb-3 md:mb-6">Built With</p>
             <div className="flex flex-wrap justify-center items-center gap-4 text-sm font-medium text-zinc-400">
               <span>Next.js</span>
               <span className="text-zinc-700">•</span>
@@ -125,14 +125,14 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us (Bento Grid) */}
-      <section className="py-14 md:py-18 lg:py-28 px-6">
+      <section className="py-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-20">
+          <div className="text-center mb-8 md:mb-20">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">The Arqovia Advantage</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto text-base md:text-lg lg:text-xl text-balance">Why businesses trust us with their complete digital presence and marketing spend.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             <div className="md:col-span-2 p-6 md:p-10 rounded-3xl bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.05] hover:border-white/10 transition-colors relative overflow-hidden group">
               <div className="absolute right-0 top-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-colors duration-500"></div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Technical & Creative Excellence</h3>
@@ -176,9 +176,9 @@ export default function Home() {
       </section>
 
       {/* Services Section with Gradient Borders */}
-      <section id="services" className="py-14 md:py-18 lg:py-28 px-6 border-t border-white/[0.05] relative bg-zinc-950/20">
+      <section id="services" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] relative bg-zinc-950/20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-20 gap-6 md:gap-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-20 gap-6 md:gap-8">
             <div className="max-w-2xl">
               <div className="text-purple-400 font-semibold tracking-wider uppercase text-sm mb-4">Our Capabilities</div>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">End-to-End Solutions</h2>
@@ -190,7 +190,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
             <ServiceCard
               title="Web Development"
               desc="High-performance, scalable websites and ecommerce stores built to convert. We focus on speed, mobile responsiveness, and clean architecture."
@@ -220,14 +220,14 @@ export default function Home() {
       </section>
 
       {/* Our Process Section */}
-      <section id="process" className="py-14 md:py-18 lg:py-28 px-6">
+      <section id="process" className="py-14 md:py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-20">
+          <div className="text-center mb-8 md:mb-20">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">Our Process</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto text-base md:text-lg lg:text-xl text-balance">A proven methodology that turns your business goals into tangible results.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-8 relative">
             {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-12 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
@@ -241,15 +241,15 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-14 md:py-18 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/40">
+      <section id="portfolio" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/40">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">Featured Case Studies</h2>
             <p className="text-zinc-400 max-w-xl mx-auto text-base md:text-lg lg:text-xl text-balance">Measurable results paired with breathtaking aesthetics.</p>
           </div>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16 bg-white/[0.02] p-2 rounded-full border border-white/[0.05]">
+          <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-16 bg-white/[0.02] p-2 rounded-full border border-white/[0.05]">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -261,7 +261,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id} {...project} />
             ))}
@@ -272,7 +272,7 @@ export default function Home() {
             )}
           </div>
 
-          <div className="mt-20">
+          <div className="mt-10 md:mt-20">
             <Link href="#contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 hover:border-white/30 transition-all group">
               <span className="font-semibold text-white">View Full Archive</span>
               <ArrowRightIcon />
@@ -282,18 +282,18 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-14 md:py-18 lg:py-28 px-6 border-t border-white/[0.05]">
+      <section id="testimonials" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05]">
         <div className="max-w-4xl mx-auto">
-          <div className="p-8 md:p-20 rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] relative hover:border-white/10 transition-colors text-center shadow-2xl backdrop-blur-sm group">
+          <div className="p-6 py-8 md:p-20 rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] relative hover:border-white/10 transition-colors text-center shadow-2xl backdrop-blur-sm group h-auto min-h-fit flex flex-col justify-center">
             <div className="absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-            <div className="flex justify-center gap-1 mb-8">
+            <div className="flex justify-center gap-1 mb-6 md:mb-8">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-5 md:w-6 h-5 md:h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
             </div>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl text-zinc-200 leading-snug md:leading-tight mb-8 md:mb-12 font-medium tracking-tight relative z-10 text-balance">&quot;Arqovia transformed our digital presence with a fast, elegant and conversion-focused website.&quot;</h2>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl text-zinc-200 leading-snug md:leading-tight mb-6 md:mb-12 font-medium tracking-tight relative z-10 text-balance">&quot;Arqovia transformed our digital presence with a fast, elegant and conversion-focused website.&quot;</h2>
             <div className="flex flex-col items-center gap-4 relative z-10">
               <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-zinc-800 to-zinc-700 flex items-center justify-center font-bold text-2xl border border-white/10 shadow-inner">
                 F
@@ -308,9 +308,9 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-14 md:py-18 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/20">
+      <section id="faq" className="py-14 md:py-20 lg:py-28 px-6 border-t border-white/[0.05] bg-zinc-950/20">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">Frequently Asked Questions</h2>
             <p className="text-zinc-400 text-base md:text-lg lg:text-xl text-balance">Everything you need to know about partnering with us.</p>
           </div>
@@ -324,14 +324,14 @@ export default function Home() {
       </section>
 
       {/* Contact CTA Section */}
-      <section id="contact" className="py-14 md:py-18 lg:py-28 px-6 relative overflow-hidden border-t border-white/[0.05]">
+      <section id="contact" className="py-14 md:py-20 lg:py-28 px-6 relative overflow-hidden border-t border-white/[0.05]">
         {/* Glow effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-gradient-to-b from-purple-900/10 md:from-purple-900/20 to-blue-900/10 md:to-blue-900/20 rounded-full blur-[60px] md:blur-[100px] -z-10 pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto border border-white/10 bg-white/[0.01] backdrop-blur-md md:backdrop-blur-2xl p-6 md:p-16 rounded-3xl md:rounded-[3rem] relative overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)]">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-70"></div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-4 md:mb-6 leading-tight">Ready to Dominate <br />Your Industry?</h2>
               <p className="text-base md:text-lg lg:text-xl text-zinc-400 mb-8 md:mb-10 max-w-xl font-light text-balance">Join the ranks of high-growth companies that trust us to engineer their digital success. Drop us a message to discuss your next big project.</p>
@@ -368,8 +368,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="pt-14 md:pt-18 lg:pt-28 pb-10 md:pb-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-16 md:mb-24">
+      <footer className="pt-14 md:pt-20 lg:pt-28 pb-10 md:pb-16 px-6 border-t border-white/[0.05] relative z-10 bg-black">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-10 md:mb-24">
           <div className="md:col-span-5 flex flex-col gap-6">
             <Logo />
             <p className="text-zinc-400 leading-relaxed max-w-sm mt-4">We are an independent digital studio forging world-class brands and products for the ambitious.</p>
@@ -453,7 +453,7 @@ function ServiceCard({ title, desc, icon, color }: { title: string, desc: string
   return (
     <div className="relative group p-[1px] rounded-3xl overflow-hidden">
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-20 group-hover:opacity-100 transition-opacity duration-500`}></div>
-      <div className="relative h-full p-6 md:p-10 rounded-[23px] bg-zinc-950 flex flex-col items-start hover:bg-zinc-900/80 transition-colors duration-500">
+      <div className="relative h-auto md:h-full p-6 md:p-10 rounded-[23px] bg-zinc-950 flex flex-col items-start hover:bg-zinc-900/80 transition-colors duration-500">
         <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${color} bg-opacity-10 flex items-center justify-center mb-8 text-white shadow-lg transform group-hover:scale-110 transition-transform duration-500`}>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
             {icon}
@@ -469,7 +469,7 @@ function ServiceCard({ title, desc, icon, color }: { title: string, desc: string
 function ProcessStep({ num, title, desc, delay }: { num: string, title: string, desc: string, delay: string }) {
   return (
     <div className={`relative flex flex-col items-center text-center ${delay} group`}>
-      <div className="w-24 h-24 rounded-full bg-black border border-white/10 flex items-center justify-center text-3xl font-bold text-zinc-700 mb-8 relative z-10 group-hover:text-white group-hover:border-purple-500/50 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-500">
+      <div className="w-24 h-24 rounded-full bg-black border border-white/10 flex items-center justify-center text-3xl font-bold text-zinc-700 mb-4 md:mb-8 relative z-10 group-hover:text-white group-hover:border-purple-500/50 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-500">
         {num}
         <div className="absolute inset-0 rounded-full border border-purple-500/0 group-hover:animate-ping opacity-20"></div>
       </div>
@@ -481,7 +481,7 @@ function ProcessStep({ num, title, desc, delay }: { num: string, title: string, 
 
 function ProjectCard({ title, category, gradient, metric }: { title: string, category: string, gradient: string, metric: string }) {
   return (
-    <div className="group cursor-pointer flex flex-col h-full w-full">
+    <div className="group cursor-pointer flex flex-col h-auto md:h-full w-full">
       <div className={`w-full aspect-[16/10] rounded-3xl mb-8 bg-gradient-to-br ${gradient} overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]`}>
         {/* Abstract shapes inside the gradient for texture */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl mix-blend-overlay"></div>
@@ -575,8 +575,8 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-zinc-400 px-1">Name</label>
           <input
@@ -601,7 +601,7 @@ function ContactForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-zinc-400 px-1">Company (Optional)</label>
           <input
