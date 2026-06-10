@@ -44,6 +44,7 @@ export default function PortfolioTable({ projects }: { projects: PortfolioProjec
                       project.image_url.startsWith('/') ? (
                         <Image src={project.image_url} alt={project.title} fill className="object-cover" />
                       ) : (
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img src={project.image_url} alt={project.title} className="w-full h-full object-cover" />
                       )
                     ) : (

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import PortfolioTable from './PortfolioTable';
 import { PortfolioProject } from '@/lib/supabase/portfolio';
 
@@ -21,12 +22,12 @@ export default function PortfolioClientWrapper({ initialProjects }: { initialPro
     <div className="max-w-6xl mx-auto">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
         <h1 className="text-3xl font-bold text-zinc-900 dark:text-white">Portfolio Management</h1>
-        <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-medium transition-colors shadow-sm">
+        <Link href="/admin/portfolio/new" className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-medium transition-colors shadow-sm">
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
           Add New Project
-        </button>
+        </Link>
       </div>
 
       {initialProjects.length > 0 && (
