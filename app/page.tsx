@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 export default function Home() {
@@ -14,12 +15,12 @@ export default function Home() {
   }, []);
 
   const projects = [
-    { id: 1, title: "Restaurant Redesign", category: "Web Development", gradient: "from-blue-500 via-indigo-600 to-slate-900", metric: "250% Traffic Growth" },
-    { id: 2, title: "Lumina Ecommerce", category: "Web Development", gradient: "from-rose-500 via-pink-600 to-purple-900", metric: "3.2x Conv. Rate" },
-    { id: 3, title: "Horizon Real Estate", category: "Digital Marketing", gradient: "from-emerald-400 via-teal-600 to-cyan-900", metric: "1M+ Leads Generated" },
-    { id: 4, title: "Gym Brand Identity", category: "Graphic Design", gradient: "from-zinc-600 via-zinc-800 to-black", metric: "Award Winning" },
-    { id: 5, title: "Velocity Facebook Ads", category: "Digital Marketing", gradient: "from-violet-500 via-purple-700 to-fuchsia-900", metric: "4x Return on Ad Spend" },
-    { id: 6, title: "TechFlow YouTube", category: "Video Editing", gradient: "from-amber-400 via-orange-600 to-red-900", metric: "10M+ Video Views" },
+    { id: 1, title: "Restaurant Redesign", category: "Web Development", image: "/portfolio/restaurant-redesign.webp.webp", metric: "250% Traffic Growth" },
+    { id: 2, title: "Lumina Ecommerce", category: "Web Development", image: "/portfolio/lumina-ecommerce.webp.webp", metric: "3.2x Conv. Rate" },
+    { id: 3, title: "Horizon Real Estate", category: "Digital Marketing", image: "/portfolio/horizon-real-estate.webp.png", metric: "1M+ Leads Generated" },
+    { id: 4, title: "Gym Brand Identity", category: "Graphic Design", image: "/portfolio/gym-brand-identity.webp.webp", metric: "Award Winning" },
+    { id: 5, title: "Velocity Facebook Ads", category: "Digital Marketing", image: "/portfolio/velocity-facebook-ads.webp.png", metric: "4x Return on Ad Spend" },
+    { id: 6, title: "TechFlow YouTube", category: "Video Editing", image: "/portfolio/techflow-youtube.webp.png", metric: "10M+ Video Views" },
   ];
 
   const categories = ["All", "Web Development", "Graphic Design", "Digital Marketing", "Video Editing"];
@@ -481,10 +482,11 @@ function ProcessStep({ num, title, desc, delay }: { num: string, title: string, 
   );
 }
 
-function ProjectCard({ title, category, gradient, metric }: { title: string, category: string, gradient: string, metric: string }) {
+function ProjectCard({ title, category, image, metric }: { title: string, category: string, image: string, metric: string }) {
   return (
     <div className="group cursor-pointer flex flex-col h-auto md:h-full w-full">
-      <div className={`w-full aspect-[16/10] rounded-3xl mb-8 bg-gradient-to-br ${gradient} overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]`}>
+      <div className="w-full aspect-[16/10] rounded-3xl mb-8 bg-zinc-900 overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+        <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
         {/* Abstract shapes inside the gradient for texture */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl mix-blend-overlay pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-40 h-40 bg-black/20 rounded-full blur-2xl pointer-events-none"></div>
