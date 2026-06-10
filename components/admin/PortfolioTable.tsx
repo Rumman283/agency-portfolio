@@ -63,7 +63,13 @@ export default function PortfolioTable({ projects }: { projects: PortfolioProjec
                     View Project
                   </a>
                 ) : (
-                  <span className="text-zinc-400">-</span>
+                  <button 
+                    disabled 
+                    title="No project URL available" 
+                    className="px-3 py-1 text-xs font-medium bg-zinc-100 dark:bg-white/5 text-zinc-400 dark:text-zinc-500 rounded-lg cursor-not-allowed border border-black/5 dark:border-white/5"
+                  >
+                    No Link
+                  </button>
                 )}
               </td>
               <td className="p-4 text-right">

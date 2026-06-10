@@ -1,12 +1,23 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { createPortfolioProject, updatePortfolioProject } from '@/app/admin/portfolio/actions';
 import { PortfolioProject } from '@/lib/supabase/portfolio';
+import ImageUploadField from './ImageUploadField';
 
 export default function PortfolioForm({ initialData }: { initialData?: PortfolioProject }) {
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  const [previewUrl, setPreviewUrl] = useState(initialData?.image_url || '');
+  const imageInputRef = useRef<HTMLInputElement>(null);
+
+  const handleUploadSuccess = (url: string) => {
+    if (imageInputRef.current) {
+      imageInputRef.current.value = url;
+    }
+    setPreviewUrl(url);
+  };
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -77,18 +88,45 @@ export default function PortfolioForm({ initialData }: { initialData?: Portfolio
         />
       </div>
 
-      <div className="space-y-2">
-        <label htmlFor="image_url" className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Image URL *</label>
-        <input
-          id="image_url"
-          name="image_url"
-          type="text"
-          required
-          defaultValue={initialData?.image_url}
-          className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-black border border-black/10 dark:border-white/10 rounded-xl outline-none focus:border-purple-500 transition-colors text-zinc-900 dark:text-white"
-          placeholder="https://example.com/image.jpg or /local-path.jpg"
-        />
-        <p className="text-xs text-zinc-500 dark:text-zinc-400">Must be a valid URL or an absolute local path (starting with /).</p>
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <label htmlFor="image_url" className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Image URL *</label>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <input
+              id="image_url"
+              name="image_url"
+              type="text"
+              required
+              ref={imageInputRef}
+              defaultValue={initialData?.image_url}
+              onChange={(e) => setPreviewUrl(e.target.value)}
+              className="flex-1 w-full px-4 py-2.5 bg-zinc-50 dark:bg-black border border-black/10 dark:border-white/10 rounded-xl outline-none focus:border-purple-500 transition-colors text-zinc-900 dark:text-white"
+              placeholder="https://example.com/image.jpg or /local-path.jpg"
+            />
+            <ImageUploadField onUploadSuccess={handleUploadSuccess} />
+          </div>
+          <p className="text-xs text-zinc-500 dark:text-zinc-400">Must be a valid URL or an absolute local path (starting with /).</p>
+        </div>
+
+        {previewUrl && (
+          <div className="w-full max-w-xs h-40 rounded-xl border border-black/10 dark:border-white/10 bg-zinc-100 dark:bg-zinc-800 overflow-hidden relative flex items-center justify-center">
+            {/* Using standard img for preview to handle external domains without errors */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src={previewUrl} 
+              alt="Image Preview" 
+              className="w-full h-full object-cover" 
+              onError={(e) => {
+                // If image fails to load, hide the image and show a fallback text
+                e.currentTarget.style.display = 'none';
+                if (e.currentTarget.nextElementSibling) {
+                  (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
+                }
+              }}
+            />
+            <span className="hidden text-zinc-400 text-sm p-4 text-center">Invalid image URL or unable to load preview.</span>
+          </div>
+        )}
       </div>
 
       <div className="space-y-2">
