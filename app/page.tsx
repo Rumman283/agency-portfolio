@@ -32,7 +32,7 @@ export default function Home() {
       <div className="fixed top-6 w-full z-50 px-6 flex justify-center pointer-events-none">
         <nav className="pointer-events-auto w-full max-w-5xl rounded-full border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl transition-all duration-500">
           <div className="px-6 h-16 flex items-center justify-between">
-            <button 
+            <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               aria-label="Scroll to top"
               className="group cursor-pointer text-left outline-none hover:opacity-80 active:scale-[0.98] transition-all duration-500 flex items-center"
@@ -64,7 +64,7 @@ export default function Home() {
             Premium Creative Agency
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 max-w-5xl text-balance leading-[1.05] animate-fade-in-up delay-100 relative">
-            Designing The Future <br className="hidden md:block"/>
+            Designing The Future <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-purple-300 to-blue-400 animate-gradient-x drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]">Of Digital Brands.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl text-balance mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
@@ -81,7 +81,7 @@ export default function Home() {
                 </svg>
               </Link>
             </div>
-            
+
             {/* Secondary CTA */}
             <Link href="#portfolio" className="group relative flex h-14 w-full sm:w-auto items-center justify-center rounded-full border border-white/10 bg-black/20 px-8 text-sm font-medium text-zinc-300 backdrop-blur-xl transition-all hover:border-white/20 hover:text-white active:scale-[0.98]">
               <span className="absolute inset-0 rounded-full bg-gradient-to-r from-white/0 via-white/[0.05] to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
@@ -98,7 +98,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto w-full px-6 flex flex-col items-center">
           <p className="text-center text-xs font-semibold text-zinc-500 uppercase tracking-[0.2em] mb-10">Trusted by global category leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-            <div className="text-xl font-bold tracking-tighter flex items-center gap-1.5"><svg className="w-5 h-5 text-zinc-100" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg> ACME CORP</div>
+            <div className="text-xl font-bold tracking-tighter flex items-center gap-1.5"><svg className="w-5 h-5 text-zinc-100" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z" /></svg> ACME CORP</div>
             <div className="text-2xl font-serif font-bold italic tracking-tight">Globex</div>
             <div className="text-xl font-bold tracking-widest uppercase flex items-center"><div className="w-3 h-3 bg-white rounded-sm mr-2 transform rotate-45"></div> SOYUZ</div>
             <div className="text-2xl font-black lowercase tracking-tighter">initech.</div>
@@ -114,7 +114,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">The Arqovia Advantage</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto text-xl">Why businesses trust us with their complete digital presence and marketing spend.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 p-10 rounded-3xl bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.05] hover:border-white/10 transition-colors relative overflow-hidden group">
               <div className="absolute right-0 top-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-colors duration-500"></div>
@@ -126,7 +126,7 @@ export default function Home() {
                 <span className="px-4 py-2 rounded-full bg-white/[0.05] text-sm text-zinc-300">High-End Production</span>
               </div>
             </div>
-            
+
             <div className="p-10 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:border-white/10 transition-colors flex flex-col justify-between">
               <div>
                 <svg className="w-12 h-12 text-blue-400 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -172,28 +172,28 @@ export default function Home() {
               <ArrowRightIcon />
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ServiceCard 
-              title="Web Development" 
+            <ServiceCard
+              title="Web Development"
               desc="High-performance, scalable websites and ecommerce stores built to convert. We focus on speed, mobile responsiveness, and clean architecture."
               icon={<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />}
               color="from-blue-500 to-cyan-400"
             />
-            <ServiceCard 
-              title="Graphic Design" 
+            <ServiceCard
+              title="Graphic Design"
               desc="Memorable brand identities, logos, and visual systems that leave a lasting impression on your audience and elevate your market positioning."
               icon={<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />}
               color="from-purple-500 to-pink-500"
             />
-            <ServiceCard 
-              title="Digital Marketing" 
+            <ServiceCard
+              title="Digital Marketing"
               desc="Data-driven Facebook & Google ad campaigns, SEO optimization, and lead generation strategies designed to maximize your return on ad spend."
               icon={<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />}
               color="from-emerald-400 to-teal-500"
             />
-            <ServiceCard 
-              title="Video Editing" 
+            <ServiceCard
+              title="Video Editing"
               desc="Cinematic storytelling, YouTube video editing, and engaging motion graphics that capture attention and convert viewers into loyal customers."
               icon={<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />}
               color="from-amber-400 to-orange-500"
@@ -213,7 +213,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
             {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-12 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-            
+
             <ProcessStep num="01" title="Discovery" desc="Deep-dive into your business goals, target audience, and competitive landscape." delay="" />
             <ProcessStep num="02" title="Strategy" desc="Architecting the campaign, defining the brand voice, and establishing targets." delay="md:mt-12" />
             <ProcessStep num="03" title="Creation" desc="Producing high-quality designs, developing the site, and editing the media." delay="" />
@@ -233,7 +233,7 @@ export default function Home() {
           {/* Category Filters */}
           <div className="flex flex-wrap justify-center gap-3 mb-16 bg-white/[0.02] p-2 rounded-full border border-white/[0.05]">
             {categories.map((cat) => (
-              <button 
+              <button
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat ? 'bg-white text-black shadow-lg' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
@@ -253,7 +253,7 @@ export default function Home() {
               </div>
             )}
           </div>
-          
+
           <div className="mt-20">
             <Link href="#contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 hover:border-white/30 transition-all group">
               <span className="font-semibold text-white">View Full Archive</span>
@@ -268,19 +268,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-20 text-center">Don&apos;t Just Take Our Word For It</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TestimonialCard 
+            <TestimonialCard
               quote="Arqovia Digital delivered an ecommerce platform that completely redefined our business. The conversion rate increase was immediate and substantial."
               author="Sarah Jenkins"
               role="Founder, Lumina Ecommerce"
               rating={5}
             />
-            <TestimonialCard 
+            <TestimonialCard
               quote="Their Facebook ads and lead generation strategies brought us more qualified real estate leads in one month than we had in the entire previous year."
               author="David Chen"
               role="Director, Horizon Real Estate"
               rating={5}
             />
-            <TestimonialCard 
+            <TestimonialCard
               quote="The video editing team completely transformed our YouTube channel. Our retention rate tripled, and the cinematic quality sets us apart from everyone."
               author="Elena Rodriguez"
               role="Creator, TechFlow"
@@ -294,37 +294,37 @@ export default function Home() {
       <section id="contact" className="py-40 px-6 relative overflow-hidden border-t border-white/[0.05]">
         {/* Glow effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-b from-purple-900/20 to-blue-900/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
-        
+
         <div className="max-w-7xl mx-auto border border-white/10 bg-white/[0.01] backdrop-blur-2xl p-8 md:p-16 rounded-[3rem] relative overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)]">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-70"></div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-6 leading-[1.1]">Ready to Dominate <br/>Your Industry?</h2>
+              <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-6 leading-[1.1]">Ready to Dominate <br />Your Industry?</h2>
               <p className="text-xl text-zinc-400 mb-10 max-w-xl font-light">Join the ranks of high-growth companies that trust us to engineer their digital success. Drop us a message to discuss your next big project.</p>
-              
+
               <div className="flex flex-col gap-6 mt-12">
                 <div className="flex items-center gap-5 text-zinc-300">
-                   <div className="w-14 h-14 rounded-full bg-white/[0.03] flex items-center justify-center border border-white/10 shadow-inner">
-                     <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                   </div>
-                   <div>
-                     <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Email Us</div>
-                     <div className="font-semibold text-white text-lg">hello@arqovia.digital</div>
-                   </div>
+                  <div className="w-14 h-14 rounded-full bg-white/[0.03] flex items-center justify-center border border-white/10 shadow-inner">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  </div>
+                  <div>
+                    <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Email Us</div>
+                    <div className="font-semibold text-white text-lg">hello@arqovia.digital</div>
+                  </div>
                 </div>
                 <div className="flex items-center gap-5 text-zinc-300">
-                   <div className="w-14 h-14 rounded-full bg-white/[0.03] flex items-center justify-center border border-white/10 shadow-inner group-hover:bg-white/[0.05] transition-colors">
-                     <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                   </div>
-                   <div>
-                     <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Remote Worldwide</div>
-                     <div className="font-semibold text-white text-lg">Available for projects globally.</div>
-                   </div>
+                  <div className="w-14 h-14 rounded-full bg-white/[0.03] flex items-center justify-center border border-white/10 shadow-inner group-hover:bg-white/[0.05] transition-colors">
+                    <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  </div>
+                  <div>
+                    <div className="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-1">Remote Worldwide</div>
+                    <div className="font-semibold text-white text-lg">Available for projects globally.</div>
+                  </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-black/40 p-8 md:p-10 rounded-3xl border border-white/5 shadow-inner">
               <ContactForm />
             </div>
@@ -341,14 +341,14 @@ export default function Home() {
             <p className="text-zinc-500 font-medium text-sm mt-2 tracking-wide">Trusted by ambitious startups worldwide.</p>
             <div className="flex gap-4 mt-2">
               <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all hover:-translate-y-1">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
               </Link>
               <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all hover:-translate-y-1">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" /></svg>
               </Link>
             </div>
           </div>
-          
+
           <div className="md:col-span-2 flex flex-col gap-4">
             <h4 className="text-white font-semibold mb-2 tracking-wide">Studio</h4>
             <Link href="#portfolio" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Work</Link>
@@ -356,7 +356,7 @@ export default function Home() {
             <Link href="#process" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Process</Link>
             <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Careers</Link>
           </div>
-          
+
           <div className="md:col-span-2 flex flex-col gap-4">
             <h4 className="text-white font-semibold mb-2 tracking-wide">Social</h4>
             <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Instagram</Link>
@@ -364,7 +364,7 @@ export default function Home() {
             <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Dribbble</Link>
             <Link href="#" className="text-zinc-400 hover:text-white hover:translate-x-1 transition-all text-sm">Behance</Link>
           </div>
-          
+
           <div className="md:col-span-3 flex flex-col gap-4">
             <h4 className="text-white font-semibold mb-2 tracking-wide">Newsletter</h4>
             <p className="text-zinc-500 text-sm mb-2">Insights on design, tech, and building brands.</p>
@@ -374,7 +374,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/[0.05]">
           <p className="text-zinc-600 text-sm mb-4 md:mb-0">© 2026 Arqovia Digital Studio. All rights reserved.</p>
           <div className="flex gap-6">
@@ -385,16 +385,16 @@ export default function Home() {
       </footer>
 
       {/* Floating WhatsApp Button */}
-      <a 
-        href="https://wa.me/1234567890" 
-        target="_blank" 
+      <a
+        href="https://wa.me/1234567890"
+        target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 group flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-emerald-600 to-green-400 text-white shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] hover:scale-110 active:scale-95 transition-all duration-300"
         aria-label="Contact us on WhatsApp"
       >
         <div className="absolute inset-0 rounded-full bg-green-400 opacity-20 group-hover:animate-ping"></div>
         <svg className="w-8 h-8 relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
         </svg>
       </a>
     </div>
@@ -448,10 +448,10 @@ function ProjectCard({ title, category, gradient, metric }: { title: string, cat
         {/* Abstract shapes inside the gradient for texture */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl mix-blend-overlay"></div>
         <div className="absolute bottom-0 left-0 w-40 h-40 bg-black/20 rounded-full blur-2xl"></div>
-        
+
         {/* Interactive hover overlay */}
         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700"></div>
-        
+
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm bg-black/40 scale-105 group-hover:scale-100">
           <div className="flex flex-col items-center transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
             <span className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center mb-4 shadow-2xl">
@@ -462,7 +462,7 @@ function ProjectCard({ title, category, gradient, metric }: { title: string, cat
             <span className="text-white font-bold tracking-widest uppercase text-sm">View Case Study</span>
           </div>
         </div>
-        
+
         {/* Metric Badge */}
         <div className="absolute bottom-6 left-6 px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center gap-2 transform group-hover:translate-y-2 opacity-100 group-hover:opacity-0 transition-all duration-300">
           <span className="w-2 h-2 rounded-full bg-green-400"></span>
@@ -510,12 +510,12 @@ function Logo() {
     <div className="flex items-center gap-4 group">
       <div className="relative flex items-center justify-center w-8 h-8 transition-transform duration-700 group-hover:scale-105">
         <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]">
-          <path d="M20 0L40 40H28L20 24L12 40H0L20 0Z" fill="url(#paint0_linear)"/>
-          <path d="M12 28L20 12L28 28H12Z" fill="white" fillOpacity="0.1" stroke="white" strokeWidth="0.5"/>
+          <path d="M20 0L40 40H28L20 24L12 40H0L20 0Z" fill="url(#paint0_linear)" />
+          <path d="M12 28L20 12L28 28H12Z" fill="white" fillOpacity="0.1" stroke="white" strokeWidth="0.5" />
           <defs>
             <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#A855F7"/>
-              <stop offset="1" stopColor="#3B82F6"/>
+              <stop stopColor="#A855F7" />
+              <stop offset="1" stopColor="#3B82F6" />
             </linearGradient>
           </defs>
         </svg>
@@ -565,10 +565,10 @@ function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-zinc-400 px-1">Name</label>
-          <input 
-            type="text" 
+          <input
+            type="text"
             value={formData.name}
-            onChange={(e) => setFormData({...formData, name: e.target.value})}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className={`w-full bg-white/[0.03] border ${errors.name ? 'border-red-500/50' : 'border-white/10'} focus:border-purple-500 rounded-xl px-4 py-3 text-white outline-none transition-colors`}
             placeholder="John Doe"
           />
@@ -576,33 +576,33 @@ function ContactForm() {
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-zinc-400 px-1">Email</label>
-          <input 
-            type="email" 
+          <input
+            type="email"
             value={formData.email}
-            onChange={(e) => setFormData({...formData, email: e.target.value})}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             className={`w-full bg-white/[0.03] border ${errors.email ? 'border-red-500/50' : 'border-white/10'} focus:border-blue-500 rounded-xl px-4 py-3 text-white outline-none transition-colors`}
             placeholder="john@example.com"
           />
           {errors.email && <span className="text-red-400 text-xs px-1">{errors.email}</span>}
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-zinc-400 px-1">Company (Optional)</label>
-          <input 
-            type="text" 
+          <input
+            type="text"
             value={formData.company}
-            onChange={(e) => setFormData({...formData, company: e.target.value})}
+            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
             className="w-full bg-white/[0.03] border border-white/10 focus:border-purple-500 rounded-xl px-4 py-3 text-white outline-none transition-colors"
             placeholder="Acme Corp"
           />
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-zinc-400 px-1">Budget</label>
-          <select 
+          <select
             value={formData.budget}
-            onChange={(e) => setFormData({...formData, budget: e.target.value})}
+            onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
             className="w-full bg-white/[0.03] border border-white/10 focus:border-blue-500 rounded-xl px-4 py-3 text-white outline-none transition-colors appearance-none"
           >
             <option value="" disabled className="bg-zinc-900">Select budget range</option>
@@ -616,9 +616,9 @@ function ContactForm() {
 
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-zinc-400 px-1">Project Details</label>
-        <textarea 
+        <textarea
           value={formData.message}
-          onChange={(e) => setFormData({...formData, message: e.target.value})}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           rows={4}
           className={`w-full bg-white/[0.03] border ${errors.message ? 'border-red-500/50' : 'border-white/10'} focus:border-purple-500 rounded-xl px-4 py-3 text-white outline-none transition-colors resize-none`}
           placeholder="Tell us about your goals..."
@@ -626,8 +626,8 @@ function ContactForm() {
         {errors.message && <span className="text-red-400 text-xs px-1">{errors.message}</span>}
       </div>
 
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         disabled={isSubmitting}
         className="relative group mt-2 w-full flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white text-black font-bold text-lg hover:bg-zinc-200 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 overflow-hidden"
       >
@@ -635,13 +635,13 @@ function ContactForm() {
         <span className="relative z-10 flex items-center gap-2">
           {isSubmitting ? 'Sending...' : isSuccess ? 'Message Sent!' : 'Send Message'}
           {!isSubmitting && !isSuccess && (
-             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-             </svg>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           )}
         </span>
       </button>
-      
+
       {isSuccess && (
         <div className="mt-2 p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 text-sm text-center animate-fade-in-up">
           Thank you! Your message has been received. We will get back to you shortly.
@@ -656,10 +656,10 @@ function AnimatedBackground() {
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Dark base */}
       <div className="absolute inset-0 bg-[#030303]"></div>
-      
+
       {/* Radial glow behind headline (centered) */}
       <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80vw] h-[600px] bg-gradient-to-b from-purple-600/20 via-blue-600/10 to-transparent blur-[120px] opacity-70"></div>
-      
+
       {/* Floating orbs */}
       <div className="absolute top-[10%] left-[15%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[150px] mix-blend-screen animate-float-slow"></div>
       <div className="absolute top-[40%] right-[10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen animate-float-slow" style={{ animationDelay: '-5s' }}></div>
@@ -667,7 +667,7 @@ function AnimatedBackground() {
 
       {/* Subtle moving light beams */}
       <div className="absolute inset-0 opacity-[0.02] animate-gradient-x" style={{ backgroundImage: 'linear-gradient(45deg, transparent 45%, white 50%, transparent 55%)' }}></div>
-      
+
       {/* Subtle noise texture */}
       <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
     </div>
