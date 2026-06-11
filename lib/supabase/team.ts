@@ -5,11 +5,12 @@ export interface TeamMember {
   name: string
   role: string
   bio: string | null
-  image_url: string
+  image_url: string | null
   linkedin_url: string | null
   github_url: string | null
   email: string | null
   display_order: number
+  is_active: boolean
   created_at: string
 }
 
