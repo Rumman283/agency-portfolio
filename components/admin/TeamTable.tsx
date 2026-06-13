@@ -166,7 +166,7 @@ export default function TeamTable({ teamMembers }: TeamTableProps) {
                 {localTeamMembers.map((member) => (
                   <tr 
                     key={member.id} 
-                    draggable={true}
+                    draggable="true"
                     onDragStart={(e) => {
                       if (isReordering) {
                         e.preventDefault();
