@@ -189,3 +189,32 @@ export async function updateTeamMemberAction(formData: FormData) {
     return { error: 'An unexpected error occurred.' }
   }
 }
+
+export async function reorderTeamMembersAction(updates: { id: string; display_order: number }[]) {
+  try {
+    const supabase = await createClient()
+
+    // Verify authentication server-side before updating
+    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    if (authError || !user) {
+      return { error: 'Unauthorized' }
+    }
+
+    if (!Array.isArray(updates) || updates.length === 0) {
+      return { error: 'No updates provided.' }
+    }
+
+    // Process updates sequentially or in parallel using Promise.all
+    await Promise.all(
+      updates.map((update) => 
+        updateTeamMember(update.id, { display_order: update.display_order })
+      )
+    )
+
+    revalidatePath('/admin/team')
+    return { success: true }
+  } catch (error) {
+    console.error('Error in reorderTeamMembersAction:', error)
+    return { error: 'An unexpected error occurred while reordering.' }
+  }
+}

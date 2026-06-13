@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useTransition, useRef } from 'react';
+import React, { useState, useTransition, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { TeamMember } from '@/lib/supabase/team';
-import { createTeamMemberAction, updateTeamMemberAction } from '@/app/admin/team/actions';
+import { createTeamMemberAction, updateTeamMemberAction, reorderTeamMembersAction } from '@/app/admin/team/actions';
 import DeleteTeamMemberButton from './DeleteTeamMemberButton';
 
 interface TeamTableProps {
@@ -19,6 +19,15 @@ export default function TeamTable({ teamMembers }: TeamTableProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [selectedImageFile, setSelectedImageFile] = useState<File | null>(null);
   const [localPreviewUrl, setLocalPreviewUrl] = useState<string | null>(null);
+
+  const [localTeamMembers, setLocalTeamMembers] = useState(teamMembers);
+  const [draggedMemberId, setDraggedMemberId] = useState<string | null>(null);
+  const [dragOverMemberId, setDragOverMemberId] = useState<string | null>(null);
+  const [isReordering, startReorderTransition] = useTransition();
+
+  useEffect(() => {
+    setLocalTeamMembers(teamMembers);
+  }, [teamMembers]);
 
   // Micro-polished input classes: soft border ring, perfectly centered text with h-12 and px-4
   const inputClasses = "appearance-none m-0 w-full h-12 bg-zinc-50/50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 text-sm text-zinc-900 dark:text-white transition-all placeholder:text-zinc-400 dark:placeholder:text-zinc-500 hover:border-zinc-300 dark:hover:border-zinc-700 focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/30";
@@ -94,7 +103,7 @@ export default function TeamTable({ teamMembers }: TeamTableProps) {
   return (
     <>
       <div className="w-full">
-        {teamMembers.length > 0 && (
+        {localTeamMembers.length > 0 && (
           <div className="mb-6 flex justify-end">
             <button 
               onClick={() => {
@@ -115,7 +124,7 @@ export default function TeamTable({ teamMembers }: TeamTableProps) {
           </div>
         )}
 
-        {teamMembers.length === 0 ? (
+        {localTeamMembers.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 px-4 border border-dashed border-black/10 dark:border-white/10 rounded-3xl bg-white dark:bg-zinc-900/50">
             <div className="w-16 h-16 mb-4 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-500">
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -154,8 +163,93 @@ export default function TeamTable({ teamMembers }: TeamTableProps) {
                 </tr>
               </thead>
               <tbody className="divide-y divide-black/5 dark:divide-white/5">
-                {teamMembers.map((member) => (
-                  <tr key={member.id} className="hover:bg-zinc-50 dark:hover:bg-white/[0.02] transition-colors group">
+                {localTeamMembers.map((member) => (
+                  <tr 
+                    key={member.id} 
+                    draggable={!isReordering}
+                    onDragStart={(e) => {
+                      if (isReordering) {
+                        e.preventDefault();
+                        return;
+                      }
+                      setDraggedMemberId(member.id);
+                      e.dataTransfer.effectAllowed = 'move';
+                    }}
+                    onDragOver={(e) => {
+                      if (isReordering) return;
+                      e.preventDefault();
+                      if (dragOverMemberId !== member.id) {
+                        setDragOverMemberId(member.id);
+                      }
+                    }}
+                    onDragLeave={() => {
+                      if (dragOverMemberId === member.id) {
+                        setDragOverMemberId(null);
+                      }
+                    }}
+                    onDragEnd={() => {
+                      setDraggedMemberId(null);
+                      setDragOverMemberId(null);
+                    }}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      if (isReordering || !draggedMemberId || draggedMemberId === member.id) {
+                        setDraggedMemberId(null);
+                        setDragOverMemberId(null);
+                        return;
+                      }
+
+                      const draggedIndex = localTeamMembers.findIndex(m => m.id === draggedMemberId);
+                      const dropIndex = localTeamMembers.findIndex(m => m.id === member.id);
+
+                      if (draggedIndex === -1 || dropIndex === -1) return;
+
+                      const newOrder = [...localTeamMembers];
+                      const [draggedItem] = newOrder.splice(draggedIndex, 1);
+                      newOrder.splice(dropIndex, 0, draggedItem);
+
+                      // 1. Skip server updates if the order did not actually change.
+                      const isSameOrder = localTeamMembers.every((m, index) => m.id === newOrder[index].id);
+                      if (isSameOrder) {
+                        setDraggedMemberId(null);
+                        setDragOverMemberId(null);
+                        return;
+                      }
+
+                      // 2. Preserve Existing Sort Fallback & Persist a fresh sequential display_order
+                      const updatedMembers = newOrder.map((m, index) => ({
+                        ...m,
+                        display_order: index
+                      }));
+
+                      setLocalTeamMembers(updatedMembers);
+                      setDraggedMemberId(null);
+                      setDragOverMemberId(null);
+
+                      // Only send updates for members whose display_order actually changed
+                      const updates = updatedMembers
+                        .filter(m => {
+                          const orig = localTeamMembers.find(o => o.id === m.id);
+                          return !orig || orig.display_order !== m.display_order;
+                        })
+                        .map(m => ({ id: m.id, display_order: m.display_order }));
+                      
+                      if (updates.length > 0) {
+                        startReorderTransition(async () => {
+                          const result = await reorderTeamMembersAction(updates);
+                          if (result.error) {
+                            setErrorMsg(result.error);
+                            setLocalTeamMembers(teamMembers); // Revert on error
+                          }
+                        });
+                      }
+                    }}
+                    className={`hover:bg-zinc-50 dark:hover:bg-white/[0.02] transition-colors group ${
+                      draggedMemberId === member.id ? 'opacity-40' : ''
+                    } ${
+                      dragOverMemberId === member.id ? 'bg-purple-50/80 dark:bg-purple-500/10 shadow-[inset_0_2px_0_0_theme(colors.purple.500)]' : ''
+                    } ${isReordering ? 'opacity-50 cursor-wait bg-zinc-50/50 dark:bg-white/[0.01]' : 'cursor-grab active:cursor-grabbing'}`}
+                  >
                     <td className="p-4">
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 relative rounded-full overflow-hidden bg-zinc-100 dark:bg-zinc-800 border border-black/5 dark:border-white/5 shrink-0 flex items-center justify-center">
